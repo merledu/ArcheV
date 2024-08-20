@@ -1,12 +1,17 @@
 html {
-    scroll-behavior:smooth; /* Enables smooth scrolling */
+    scroll-behavior:smooth; 
 }
 .section {
-    scroll-snap-align: start; /* Snap to the start of the section */
+    scroll-snap-align: start; 
 }
 * {
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;   
+    font-family: 'ubuntu';   
+}
+
+.error-message{
+    color: red;
+    display: none;
 }
 
 .first {
@@ -68,6 +73,8 @@ html {
 
 .navbar {
     position: fixed;
+    display: flex;
+    justify-content: center;
     top: 0;
     width: 100%;
     height: 70px;
@@ -108,12 +115,15 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.502);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000; /* Ensure it's on top of other content */
 }
+
 
 .merl {
     width: 90%;
@@ -182,6 +192,7 @@ a {
 }
 table{
 animation: fadeIn 1s ease-out;
+color:black;
 }
 .slides-form {
     padding: 20px;
@@ -517,4 +528,3 @@ menun_logo .git{
 .fifth p{
     animation: fadeIn 1s ease-out;
 }
-

@@ -1,3 +1,14 @@
+function analyze() {
+    // Get data from input fields
+    var llm_path = document.getElementById("llm-path").value;
+    var context_number = document.getElementById("context-number").value;
+    var gpu_layers = document.getElementById("gpu-layers").value;
+
+    pywebview.api.llm_settings(gpu_layers,context_number,llm_path)
+    pywebview.api.main()
+}
+
+
 document.getElementById('check').addEventListener('click', function() {
     const llmPath = document.getElementById('llm-path').value;
     const gpuLayers = document.getElementById('gpu-layers').value;
@@ -9,9 +20,9 @@ document.getElementById('check').addEventListener('click', function() {
         gpu_layers: gpuLayers,
         context_number: contextNumber
     }).then(response => {
-        console.log(response); // Check the response in the browser console
+        console.log(response); 
     }).catch(error => {
-        console.error('Error:', error); // Log any errors to the console
+        console.error('Error:', error); 
     });
 
     // Fetch flow data from Python and update the table
@@ -36,12 +47,12 @@ function updateTable(data) {
 
         // Create and append the Module Name cell
         const moduleNameCell = document.createElement('td');
-        moduleNameCell.textContent = item[2]; // Assuming module name is the third element in tuple
+        moduleNameCell.textContent = item[2]; 
         row.appendChild(moduleNameCell);
 
         // Create and append the Syntactical Verification cell
         const syntacticalCell = document.createElement('td');
-        const syntacticalStatus = item[0]; // First column for syntactical verification
+        const syntacticalStatus = item[0]; 
         const syntacticalText = document.createElement('p');
         syntacticalText.className = syntacticalStatus === 'passed' ? 'status delivered' : 'status cancelled';
         syntacticalText.textContent = syntacticalStatus === 'passed' ? 'Passed' : 'Failed';
@@ -50,7 +61,7 @@ function updateTable(data) {
 
         // Create and append the Functional Verification cell
         const functionalCell = document.createElement('td');
-        const functionalStatus = item[1]; // Second column for functional verification
+        const functionalStatus = item[1]; 
         const functionalText = document.createElement('p');
         functionalText.className = functionalStatus === 'passed' ? 'status delivered' : 'status cancelled';
         functionalText.textContent = functionalStatus === 'passed' ? 'Passed' : 'Failed';

@@ -1,14 +1,14 @@
 import os
-import linter
-import funct
-import sys
-sys.path.append('/home/shehroz/ArcheV')
-import main
-# llm settings
-api = main.API()
-LLM_settings = api.get_stored_values()
-print(LLM_settings)
+from ..integration import linter
+from ..integration  import funct
+from globals import ArcheV_propmts
+from globals import ArcheV_json_files
+from ..llm_interface import llm_interface
 
+
+def llm_settings(gpu_layers,context_number,LLM_path):
+    #llm settings 
+    pass 
 
 
 # Providing prompts to LLM
@@ -40,12 +40,12 @@ def read_files_from_directory(directory_path, extension):
 def remove_extension(filename):
     return os.path.splitext(filename)[0]
 
-propmpts_path = '/home/shehroz/ArcheV/prompts'  # for prompts
+propmpts_path =  ArcheV_propmts 
 prompts, prompts_filename = read_files_from_directory(propmpts_path, ".txt")
-json_file_path = "/home/shehroz/ArcheV/functional_verification"  # for function verification
-json_files, json_names = read_files_from_directory(json_file_path, ".json")  # JSON files
+json_file_path = ArcheV_json_files 
+json_files, json_names = read_files_from_directory(json_file_path, ".json")  
 
-def master_function(json_str, verilog_code):  # It will return the results
+def master_function(json_str, verilog_code):  
     # Syntactical verification
     syntactical_verification_results = linter.run_verilator_lint(verilog_code)
     # Functional verification
@@ -53,10 +53,10 @@ def master_function(json_str, verilog_code):  # It will return the results
     return syntactical_verification_results, functional_verification_results
 
 def main():
-    results = []  # List to store results for each iteration
+    results = []  
 
     for i in range(len(prompts)):
-        # Hardcoded the LLM code for testing The LLM class wll be used here I need verilog code here
+        
         verilog_code = """  
 module mux_2to1 (
     input wire a,
@@ -69,23 +69,19 @@ endmodule
     
 """
 
-        str = ""  # Initialize str to avoid UnboundLocalError
+        str = ""  
 
         prompt_name_without_extension = remove_extension(prompts_filename[i])
 
-        for j in range(len(json_files)):  # This will find the prompt_file_name in JSON list
+        for j in range(len(json_files)):  
             json_name_without_extension = remove_extension(json_names[j])
             if prompt_name_without_extension == json_name_without_extension:
                 str = "\n".join(json_files[j])
-                break  # Once matched, exit the loop
+                break  
 
-        if str:  # Only proceed if str was assigned
+        if str:  
             syntactical, functional = master_function(str, verilog_code)
-            # Store syntactical and functional results along with the prompt name in the list
+            
             results.append((syntactical, functional, prompt_name_without_extension))
 
-    return results  # Return the list of results
-
-results = main()
-for result in results:
-    print(result)
+    return results
