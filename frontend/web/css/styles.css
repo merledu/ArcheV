@@ -27,7 +27,7 @@ html {
 
 .second {
     background-image: url("../images/background/AI.jpg");
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-attachment: fixed; 
@@ -527,4 +527,12 @@ menun_logo .git{
 }
 .fifth p{
     animation: fadeIn 1s ease-out;
+}
+
+#arrow{
+    color:white;
+    font-weight: 900;
+    cursor: pointer ;
+    font-size: 50px;
+    margin-top: 150px;
 }

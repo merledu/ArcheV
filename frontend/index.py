@@ -52,6 +52,7 @@ def master_function(json_str, verilog_code):
     functional_verification_results = funct.functional_verification(verilog_code, json_str)
     return syntactical_verification_results, functional_verification_results
 
+
 def main():
     results = []  
 

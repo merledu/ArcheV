@@ -133,6 +133,12 @@
   window.onload = scrollToTop;
 
   
-
+  function second() {
+    var element = document.getElementsByClassName("second")[0];
+    if (element) {
+        element.style.display = "flex";
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
 
