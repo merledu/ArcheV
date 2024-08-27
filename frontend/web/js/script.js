@@ -140,5 +140,3 @@
         element.scrollIntoView({ behavior: 'smooth' });
     }
 }
-
-
