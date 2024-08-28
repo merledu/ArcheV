@@ -1,3 +1,4 @@
 .venv/
 .vscode/
-.metals/
+__pycache__/
+
