@@ -1,0 +1,192 @@
+{
+    "test_case_1": [
+      {
+        "input": {
+          "alu_in": "0x00000005",
+          "mem_data_in": "0x00000000",
+          "rd_addr_in": "0x06",
+          "wr_en_in": "0x1",
+          "load_en_in": "0x0"
+        },
+        "expected_output": {
+        "alu_out": "0x00000000",
+        "mem_data_out": "0x00000000",
+        "rd_addr_out": "0x05",
+        "wr_en_out": "0x1",
+        "load_en_out": "0x0"
+
+        }
+      }
+    ],
+    "test_case_2": [
+      {
+        "input": {
+            "alu_in": "0x00000005",
+            "mem_data_in": "0x00000000",
+            "rd_addr_in": "0x08",
+            "wr_en_in": "0x1",
+            "load_en_in": "0x0"
+          },
+          "expected_output": {
+          "alu_out": "0x00000005",
+          "mem_data_out": "0x00000000",
+          "rd_addr_out": "0x06",
+          "wr_en_out": "0x1",
+          "load_en_out": "0x0"
+  
+          }      }
+    ],
+    "test_case_3": [
+      {
+        "input": {
+            "alu_in": "0x00000001",
+            "mem_data_in": "0x00000000",
+            "rd_addr_in": "0x05",
+            "wr_en_in": "0x1",
+            "load_en_in": "0x0"
+          },
+          "expected_output": {
+          "alu_out": "0x00000005",
+          "mem_data_out": "0x00000000",
+          "rd_addr_out": "0x08",
+          "wr_en_out": "0x1",
+          "load_en_out": "0x0"
+  
+          }  
+      }
+    ],
+    "test_case_4": [
+      {
+        "input": {
+            "alu_in": "0x00000064",
+            "mem_data_in": "0x00000000",
+            "rd_addr_in": "0x00",
+            "wr_en_in": "0x0",
+            "load_en_in": "0x0"
+          },
+          "expected_output": {
+          "alu_out": "0x00000001",
+          "mem_data_out": "0x00000000",
+          "rd_addr_out": "0x05",
+          "wr_en_out": "0x1",
+          "load_en_out": "0x0"
+  
+          }  
+      }
+    ],
+    "test_case_5": [
+      {
+        "input": {
+            "alu_in": "0x00000000",
+            "mem_data_in": "0x00000000",
+            "rd_addr_in": "0x08",
+            "wr_en_in": "0x1",
+            "load_en_in": "0x0"
+          },
+          "expected_output": {
+          "alu_out": "0x00000064",
+          "mem_data_out": "0x00000000",
+          "rd_addr_out": "0x00",
+          "wr_en_out": "0x0",
+          "load_en_out": "0x0"
+  
+          }  
+      }
+    ],
+    "test_case_6": [
+        {
+            "input": {
+                "alu_in": "0x00000020",
+                "mem_data_in": "0x00000000",
+                "rd_addr_in": "0x01",
+                "wr_en_in": "0x1",
+                "load_en_in": "0x0"
+              },
+              "expected_output": {
+              "alu_out": "0x00000000",
+              "mem_data_out": "0x00000000",
+              "rd_addr_out": "0x00",
+              "wr_en_out": "0x0",
+              "load_en_out": "0x0"
+      
+              }  
+          }
+    ],
+    "test_case_7": [
+        {
+            "input": {
+                "alu_in": "0x00000064",
+                "mem_data_in": "0x00000000",
+                "rd_addr_in": "0x08",
+                "wr_en_in": "0x0",
+                "load_en_in": "0x0"
+              },
+              "expected_output": {
+              "alu_out": "0x00000000",
+              "mem_data_out": "0x00000000",
+              "rd_addr_out": "0x05",
+              "wr_en_out": "0x1",
+              "load_en_out": "0x0"
+      
+              }  
+          }
+    ],
+    "test_case_8": [
+        {
+            "input": {
+                "alu_in": "0x00000020",
+                "mem_data_in": "0x00000000",
+                "rd_addr_in": "0x01",
+                "wr_en_in": "0x1",
+                "load_en_in": "0x0"
+              },
+              "expected_output": {
+              "alu_out": "0x00000000",
+              "mem_data_out": "0x00000000",
+              "rd_addr_out": "0x00",
+              "wr_en_out": "0x0",
+              "load_en_out": "0x0"
+      
+              }  
+          }
+    ],
+    "test_case_9": [
+        {
+            "input": {
+                "alu_in": "0x00000064",
+                "mem_data_in": "0x00000000",
+                "rd_addr_in": "0x00",
+                "wr_en_in": "0x0",
+                "load_en_in": "0x0"
+              },
+              "expected_output": {
+              "alu_out": "0x00000000",
+              "mem_data_out": "0x00000000",
+              "rd_addr_out": "0x05",
+              "wr_en_out": "0x1",
+              "load_en_out": "0x0"
+      
+              }  
+          }
+    ],
+    "test_case_10": [
+        {
+            "input": {
+                "alu_in": "0x00000020",
+                "mem_data_in": "0x00000000",
+                "rd_addr_in": "0x01",
+                "wr_en_in": "0x1",
+                "load_en_in": "0x0"
+              },
+              "expected_output": {
+              "alu_out": "0x00000000",
+              "mem_data_out": "0x00000000",
+              "rd_addr_out": "0x00",
+              "wr_en_out": "0x0",
+              "load_en_out": "0x0"
+      
+              }  
+          }
+    ]
+
+  }
