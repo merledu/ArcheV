@@ -1,0 +1,362 @@
+{
+  "test_case_1": [
+    {
+      "id": "test_case_1",
+      "inputs": {
+        "alu_in": "00000000",
+        "rd_addr_in": "00000005",
+        "rs2_data_in": "00000000",
+        "wr_en_in": "1",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000000",
+        "rd_addr_out": "00000005",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_2": [
+    {
+      "id": "test_case_2",
+      "inputs": {
+        "alu_in": "00000005",
+        "rd_addr_in": "00000006",
+        "rs2_data_in": "00000000",
+        "wr_en_in": "1",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000000",
+        "rd_addr_out": "00000005",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_3": [
+    {
+      "id": "test_case_3",
+      "inputs": {
+        "alu_in": "00000005",
+        "rd_addr_in": "00000008",
+        "rs2_data_in": "00000000",
+        "wr_en_in": "1",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000005",
+        "rd_addr_out": "00000006",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_4": [
+    {
+      "id": "test_case_4",
+      "inputs": {
+        "alu_in": "00000001",
+        "rd_addr_in": "00000005",
+        "rs2_data_in": "00000000",
+        "wr_en_in": "1",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000005",
+        "rd_addr_out": "00000008",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_5": [
+    {
+      "id": "test_case_5",
+      "inputs": {
+        "alu_in": "00000064",
+        "rd_addr_in": "00000000",
+        "rs2_data_in": "00000001",
+        "wr_en_in": "0",
+        "str_en_in": "1",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "1",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000001",
+        "rd_addr_out": "00000005",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_6": [
+    {
+      "id": "test_case_6",
+      "inputs": {
+        "alu_in": "00000000",
+        "rd_addr_in": "00000000",
+        "rs2_data_in": "00000005",
+        "wr_en_in": "0",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000064",
+        "rd_addr_out": "00000000",
+        "rs2_data_out": "00000001",
+        "wr_en_out": "0",
+        "str_en_out": "1",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "1",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_7": [
+    {
+      "id": "test_case_7",
+      "inputs": {
+        "alu_in": "00000064",
+        "rd_addr_in": "00000001",
+        "rs2_data_in": "00000000",
+        "wr_en_in": "1",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000001",
+        "rd_addr_out": "00000001",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_8": [
+    {
+      "id": "test_case_8",
+      "inputs": {
+        "alu_in": "00000064",
+        "rd_addr_in": "00000005",
+        "rs2_data_in": "00000001",
+        "wr_en_in": "1",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000001",
+        "rd_addr_out": "00000005",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_9": [
+    {
+      "id": "test_case_9",
+      "inputs": {
+        "alu_in": "00000003",
+        "rd_addr_in": "00000001",
+        "rs2_data_in": "00000002",
+        "wr_en_in": "1",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000000",
+        "rd_addr_out": "00000001",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ],
+  "test_case_10": [
+    {
+      "id": "test_case_10",
+      "inputs": {
+        "alu_in": "00000001",
+        "rd_addr_in": "00000001",
+        "rs2_data_in": "00000003",
+        "wr_en_in": "1",
+        "str_en_in": "0",
+        "sb_en_in": "0",
+        "sh_en_in": "0",
+        "sw_en_in": "0",
+        "load_en_in": "0",
+        "lb_en_in": "0",
+        "lh_en_in": "0",
+        "lw_en_in": "0",
+        "lbu_en_in": "0",
+        "lhu_en_in": "0"
+      },
+      "outputs": {
+        "alu_out": "00000000",
+        "rd_addr_out": "00000001",
+        "rs2_data_out": "00000000",
+        "wr_en_out": "1",
+        "str_en_out": "0",
+        "load_en_out": "0",
+        "sb_en_out": "0",
+        "sh_en_out": "0",
+        "sw_en_out": "0",
+        "lb_en_out": "0",
+        "lhu_en_out": "0",
+        "lbu_en_out": "0",
+        "lh_en_out": "0"
+      }
+    }
+  ]
+}

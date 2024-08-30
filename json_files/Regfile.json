@@ -1,0 +1,151 @@
+{
+  "test_case_1": [
+      {
+          "id": 1,
+          "inputs": {
+              "rd_addr": "01",
+              "rd_data": "00000020",
+              "rs1_addr": "00",
+              "wr_en": "1"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000000"
+          }
+      }
+  ],
+  "test_case_2": [
+      {
+          "id": 2,
+          "inputs": {
+              "rd_addr": "00",
+              "rd_data": "00000000",
+              "rs1_addr": "00",
+              "wr_en": "1"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000000"
+          }
+      }
+  ],
+  "test_case_3": [
+      {
+          "id": 3,
+          "inputs": {
+              "rd_addr": "00",
+              "rd_data": "00000000",
+              "rs1_addr": "05",
+              "wr_en": "1"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000005"
+          }
+      }
+  ],
+  "test_case_4": [
+      {
+          "id": 4,
+          "inputs": {
+              "rd_addr": "05",
+              "rd_data": "00000000",
+              "rs1_addr": "00",
+              "wr_en": "1"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000000"
+          }
+      }
+  ],
+  "test_case_5": [
+      {
+          "id": 5,
+          "inputs": {
+              "rd_addr": "00",
+              "rd_data": "00000064",
+              "rs1_addr": "0",
+              "wr_en": "0"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000000"
+          }
+      }
+  ],
+  "test_case_6": [
+      {
+          "id": 6,
+          "inputs": {
+              "rd_addr": "05",
+              "rd_data": "00000000",
+              "rs1_addr": "00",
+              "wr_en": "1"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000000"
+          }
+      }
+  ],
+  "test_case_7": [
+      {
+          "id": 7,
+          "inputs": {
+              "rd_addr": "00",
+              "rd_data": "00000064",
+              "rs1_addr": "0"
+          },
+          "outputs": {
+              "pc_out": "00000000",
+              "instruction_out": "00000000"
+          }
+      }
+  ],
+  "test_case_8": [
+      {
+          "id": 8,
+          "inputs": {
+              "rd_addr": "00",
+              "rd_data": "00000000",
+              "rs1_addr": "05",
+              "wr_en": "1"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000005"
+          }
+      }
+  ],
+  "test_case_9": [
+      {
+          "id": 9,
+          "inputs": {
+              "rd_addr": "00",
+              "rd_data": "00000000",
+              "rs1_addr": "05",
+              "wr_en": "1"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000005"
+          }
+      }
+  ],
+  "test_case_10": [
+      {
+          "id": 10,
+          "inputs": {
+              "rd_addr": "05",
+              "rd_data": "00000020",
+              "rs1_addr": "00",
+              "wr_en": "1"
+          },
+          "outputs": {
+              "rs1_data": "00000000",
+              "rs2_data": "00000000"
+          }
+      }
+  ]
+}

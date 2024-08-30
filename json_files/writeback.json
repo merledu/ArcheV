@@ -1,0 +1,48 @@
+{
+  "test_cases": [
+      {
+          "id": 1,
+          "inputs": {
+              "alu_result": "0x00bc614e",  
+              "mem_data": "0x052d02d9",
+              "load_data_sel": "0x0"
+          },
+          "outputs": {
+              "wb_data": "0x00bc614e"
+          }
+      },
+      {
+          "id": 2,
+          "inputs": {
+              "alu_result": "0x00bc614e",
+              "mem_data": "0x052d02d9",
+              "load_data_sel": "0x1"
+          },
+          "outputs": {
+              "wb_data": "0x052d02d9"
+          }
+      },
+      {
+          "id": 3,
+          "inputs": {
+              "alu_result": "-0x00bc614e",
+              "mem_data": "-0x052d02d9",
+              "load_data_sel": "0x0"
+          },
+          "outputs": {
+              "wb_data": "-0x00bc614e"
+          }
+      },
+      {
+          "id": 4,
+          "inputs": {
+              "alu_result": "-0x00bc614e",
+              "mem_data": "-0x052d02d9",
+              "load_data_sel": "0x1"
+          },
+          "outputs": {
+              "wb_data": "-0x052d02d9"
+          }
+      }
+  ]
+}
