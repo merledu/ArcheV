@@ -1,0 +1,255 @@
+{
+  "test_cases": [
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000000",
+        "alu": "00000000",
+        "RegAM_alu_out": "00000000",
+        "WriteBack_rd_data": "00000000",
+        "Memory_out": "00000000",
+        "func3": "00000000",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000013",
+        "forward_jump_operand1": "00000000",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000000"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000000",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000000",
+        "alu": "00000005",
+        "RegAM_alu_out": "00000000",
+        "WriteBack_rd_data": "00000000",
+        "Memory_out": "00000000",
+        "func3": "00000000",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000033",
+        "forward_jump_operand1": "00000000",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000000"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000000",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000000",
+        "alu": "00000005",
+        "RegAM_alu_out": "00000005",
+        "WriteBack_rd_data": "00000000",
+        "Memory_out": "00000000",
+        "func3": "00000000",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000013",
+        "forward_jump_operand1": "00000000",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000001"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000000",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000000",
+        "alu": "00000001",
+        "RegAM_alu_out": "00000005",
+        "WriteBack_rd_data": "00000005",
+        "Memory_out": "00000000",
+        "func3": "00000002",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000023",
+        "forward_jump_operand1": "00000000",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000064"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000000",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000005",
+        "alu": "00000064",
+        "RegAM_alu_out": "00000001",
+        "WriteBack_rd_data": "00000005",
+        "Memory_out": "00000000",
+        "func3": "00000000",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000063",
+        "forward_jump_operand1": "00000002",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000008"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000001",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000006"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000000",
+        "alu": "00000000",
+        "RegAM_alu_out": "00000064",
+        "WriteBack_rd_data": "00000001",
+        "Memory_out": "00000000",
+        "func3": "00000000",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "0000006F",
+        "forward_jump_operand1": "00000000",
+        "forward_jump_operand2": "00000000",
+        "imm": "FFFFFFF4"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000000",
+        "jal_en": "00000001",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000000",
+        "alu": "00000020",
+        "RegAM_alu_out": "00000000",
+        "WriteBack_rd_data": "00000064",
+        "Memory_out": "00000000",
+        "func3": "00000000",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000000",
+        "forward_jump_operand1": "00000000",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000005"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000000",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000000",
+        "alu": "00000000",
+        "RegAM_alu_out": "00000020",
+        "WriteBack_rd_data": "00000000",
+        "Memory_out": "00000000",
+        "func3": "00000000",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000013",
+        "forward_jump_operand1": "00000000",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000005"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000000",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000000",
+        "rs2_data": "00000001",
+        "alu": "00000000",
+        "RegAM_alu_out": "00000000",
+        "WriteBack_rd_data": "00000020",
+        "Memory_out": "00000000",
+        "func3": "00000002",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000023",
+        "forward_jump_operand1": "00000000",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000064"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000000",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "rs1_data": "00000001",
+        "rs2_data": "00000005",
+        "alu": "00000064",
+        "RegAM_alu_out": "00000000",
+        "WriteBack_rd_data": "00000000",
+        "Memory_out": "00000000",
+        "func3": "00000000",
+        "b_id": "00000063",
+        "j_id": "0000006F",
+        "i_jalr_id": "00000067",
+        "opcode": "00000063",
+        "forward_jump_operand1": "00000002",
+        "forward_jump_operand2": "00000000",
+        "imm": "00000008"
+      },
+      "outputs": {
+        "br_en": "00000000",
+        "b_en": "00000001",
+        "jal_en": "00000000",
+        "jalr_en": "00000000",
+        "jalr_PC": "00000004"
+      }
+    }
+  ]
+}
+

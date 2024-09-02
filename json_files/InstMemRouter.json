@@ -1,0 +1,161 @@
+{
+  "test_cases": [
+    {
+      "inputs": {
+        "addrIn": "00000001",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "00000293",
+        "stallInst": "00000293"
+      },
+      "outputs": {
+        "addrOut": "00000001",
+        "instOut": "00000293"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000002",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "00000293",
+        "stallInst": "00000293"
+      },
+      "outputs": {
+        "addrOut": "00000002",
+        "instOut": "00000293"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000003",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "00502285",
+        "stallInst": "00502285"
+      },
+      "outputs": {
+        "addrOut": "00000003",
+        "instOut": "00502285"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000004",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "00530D93",
+        "stallInst": "00530D93"
+      },
+      "outputs": {
+        "addrOut": "00000004",
+        "instOut": "00530D93"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000005",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "0012D803",
+        "stallInst": "0012D803"
+      },
+      "outputs": {
+        "addrOut": "00000005",
+        "instOut": "0012D803"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000006",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "06500073",
+        "stallInst": "06500073"
+      },
+      "outputs": {
+        "addrOut": "00000006",
+        "instOut": "06500073"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000007",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "00626293",
+        "stallInst": "00626293"
+      },
+      "outputs": {
+        "addrOut": "00000007",
+        "instOut": "00626293"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000000",
+        "jumpStallEn": "00000001",
+        "stallEn": "00000000",
+        "memInstIn": "FF000073",
+        "stallInst": "FF000073"
+      },
+      "outputs": {
+        "addrOut": "00000000",
+        "instOut": "00000000"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000004",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "06442D03",
+        "stallInst": "00000000"
+      },
+      "outputs": {
+        "addrOut": "00000004",
+        "instOut": "06442D03"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000005",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "00000293",
+        "stallInst": "00000293"
+      },
+      "outputs": {
+        "addrOut": "00000005",
+        "instOut": "00000293"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000006",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "06500073",
+        "stallInst": "06500073"
+      },
+      "outputs": {
+        "addrOut": "00000006",
+        "instOut": "06500073"
+      }
+    },
+    {
+      "inputs": {
+        "addrIn": "00000007",
+        "jumpStallEn": "00000000",
+        "stallEn": "00000000",
+        "memInstIn": "00626293",
+        "stallInst": "00626293"
+      },
+      "outputs": {
+        "addrOut": "00000007",
+        "instOut": "0062F93B"
+      }
+    }
+  ]
+}
+
