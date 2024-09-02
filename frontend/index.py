@@ -1,9 +1,9 @@
 import os
-from ..integration import linter
-from ..integration  import funct
+from  integration import linter
+from  integration  import funct
 from globals import ArcheV_propmts
 from globals import ArcheV_json_files
-from ..llm_interface import llm_interface
+from  llm_interface import llm_interface
 
 
 def llm_settings(gpu_layers,context_number,LLM_path):
