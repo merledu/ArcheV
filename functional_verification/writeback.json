@@ -1,45 +1,48 @@
 {
-    "test_cases": [
+  "test_cases": [
       {
-        "input": {
-          "alu_result": 12345678,
-          "mem_data": 87654321,
-          "load_data_sel": 0
-        },
-        "expected_output": {
-          "wb_data": 12345678
-        }
+          "id": 1,
+          "inputs": {
+              "alu_result": "0x00bc614e",  
+              "mem_data": "0x052d02d9",
+              "load_data_sel": "0x0"
+          },
+          "outputs": {
+              "wb_data": "0x00bc614e"
+          }
       },
       {
-        "input": {
-          "alu_result": 12345678,
-          "mem_data": 87654321,
-          "load_data_sel": 1
-        },
-        "expected_output": {
-          "wb_data": 87654321
-        }
+          "id": 2,
+          "inputs": {
+              "alu_result": "0x00bc614e",
+              "mem_data": "0x052d02d9",
+              "load_data_sel": "0x1"
+          },
+          "outputs": {
+              "wb_data": "0x052d02d9"
+          }
       },
       {
-        "input": {
-          "alu_result": -12345678,
-          "mem_data": -87654321,
-          "load_data_sel": 0
-        },
-        "expected_output": {
-          "wb_data": -12345678
-        }
+          "id": 3,
+          "inputs": {
+              "alu_result": "-0x00bc614e",
+              "mem_data": "-0x052d02d9",
+              "load_data_sel": "0x0"
+          },
+          "outputs": {
+              "wb_data": "-0x00bc614e"
+          }
       },
       {
-        "input": {
-          "alu_result": -12345678,
-          "mem_data": -87654321,
-          "load_data_sel": 1
-        },
-        "expected_output": {
-          "wb_data": -87654321
-        }
+          "id": 4,
+          "inputs": {
+              "alu_result": "-0x00bc614e",
+              "mem_data": "-0x052d02d9",
+              "load_data_sel": "0x1"
+          },
+          "outputs": {
+              "wb_data": "-0x052d02d9"
+          }
       }
-    ]
-  }
-  
+  ]
+}

@@ -1,37 +1,11 @@
 function analyze() {
-    // Get data from input fields
-    var llm_path = document.getElementById("llm-path").value;
-    var context_number = document.getElementById("context-number").value;
-    var gpu_layers = document.getElementById("gpu-layers").value;
+    let llm_path = document.getElementById("llm-path").value;
+    let context_number = document.getElementById("context-number").value;
+    let gpu_layers = document.getElementById("gpu-layers").value;
 
-    pywebview.api.llm_settings(gpu_layers,context_number,llm_path)
-    pywebview.api.main()
+    pywebview.api.llm_settings(gpu_layers, context_number, llm_path)
+    // pywebview.api.analyze()
 }
-
-
-document.getElementById('check').addEventListener('click', function() {
-    const llmPath = document.getElementById('llm-path').value;
-    const gpuLayers = document.getElementById('gpu-layers').value;
-    const contextNumber = document.getElementById('context-number').value;
-
-    // Send data to Python
-    window.pywebview.api.analyze({
-        llm_path: llmPath,
-        gpu_layers: gpuLayers,
-        context_number: contextNumber
-    }).then(response => {
-        console.log(response); 
-    }).catch(error => {
-        console.error('Error:', error); 
-    });
-
-    // Fetch flow data from Python and update the table
-    window.pywebview.api.get_flow_data().then(data => {
-        updateTable(data);
-    }).catch(error => {
-        console.error('Error fetching flow data:', error);
-    });
-});
 function updateTable(data) {
     const tableBody = document.querySelector('table tbody');
     tableBody.innerHTML = ''; // Clear existing rows

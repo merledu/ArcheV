@@ -1,12 +1,15 @@
 import os
-from  integration import linter
-from  integration  import funct
-from globals import ArcheV_propmts
-from globals import ArcheV_json_files
-from  llm_interface import llm_interface
+
+from llama_cpp import Llama
+
+from analyzers.linter import lint
+from analyzers.funct import funct
+from globals import ARCHEV_PROMPTS, FUNCT_VERIF, llm
+from llm_interface.llm_interface import llm_response
 
 
-def llm_settings(gpu_layers,context_number,LLM_path):
+def llm_settings(gpu_layers, context_number, LLM_path):
+    print(llm)
     #llm settings 
     pass 
 
@@ -53,7 +56,7 @@ def master_function(json_str, verilog_code):
     return syntactical_verification_results, functional_verification_results
 
 
-def main():
+def analyze():
     results = []  
 
     for i in range(len(prompts)):

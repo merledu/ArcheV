@@ -1,5 +1,7 @@
-from frontend import expose
 import webview
+
+from frontend.expose import expose
+
 
 if __name__ == '__main__':
     window = webview.create_window(
@@ -10,3 +12,4 @@ if __name__ == '__main__':
         resizable=False,
     )
     webview.start(expose, window)
+
