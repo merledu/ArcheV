@@ -1,48 +1,114 @@
 {
-  "test_cases": [
+    "test_cases": [
       {
-          "id": 1,
-          "inputs": {
-              "alu_result": "0x00bc614e",  
-              "mem_data": "0x052d02d9",
-              "load_data_sel": "0x0"
-          },
-          "outputs": {
-              "wb_data": "0x00bc614e"
-          }
+        "id":1,
+        "input": {
+          "alu_result": "0x00000005",
+          "mem_data": 0,
+          "load_data_sel": 0
+        },
+        "expected_output": {
+          "wb_data": "0x00000005"
+        }
       },
       {
-          "id": 2,
-          "inputs": {
-              "alu_result": "0x00bc614e",
-              "mem_data": "0x052d02d9",
-              "load_data_sel": "0x1"
-          },
-          "outputs": {
-              "wb_data": "0x052d02d9"
-          }
+        "id":2,
+        "input": {
+          "alu_result": "0x00000324",
+          "mem_data": 0,
+          "load_data_sel": 0
+        },
+        "expected_output": {
+          "wb_data": "0x00000324"
+        }
       },
       {
-          "id": 3,
-          "inputs": {
-              "alu_result": "-0x00bc614e",
-              "mem_data": "-0x052d02d9",
-              "load_data_sel": "0x0"
-          },
-          "outputs": {
-              "wb_data": "-0x00bc614e"
-          }
+        "id":3,
+        "input": {
+          "alu_result": "0x00000007",
+          "mem_data": 0,
+          "load_data_sel": 0
+        },
+        "expected_output": {
+          "wb_data": "0x00000007"
+        }
       },
       {
-          "id": 4,
-          "inputs": {
-              "alu_result": "-0x00bc614e",
-              "mem_data": "-0x052d02d9",
-              "load_data_sel": "0x1"
-          },
-          "outputs": {
-              "wb_data": "-0x052d02d9"
-          }
+        "id":4,
+        "input": {
+          "alu_result": 0,
+          "mem_data": "0x00000001",
+          "load_data_sel": 1
+        },
+        "expected_output": {
+          "wb_data": "0x00000001"
+        }
+      },
+      
+
+      {
+        "id":5,
+        "input": {
+          "alu_result": "0x0000004",
+          "mem_data": 0,
+          "load_data_sel": 0
+        },
+        "expected_output": {
+          "wb_data": "0x0000004"
+        }
+      },
+      {
+        "id":6,
+        "input": {
+          "alu_result": 0,
+          "mem_data": "0x00000009",
+          "load_data_sel": 1
+        },
+        "expected_output": {
+          "wb_data": "0x00000009"
+        }
+      },
+      {
+        "input": {
+          "alu_result": "0x00000001",
+          "mem_data": 0,
+          "load_data_sel": 0
+        },
+        "expected_output": {
+          "wb_data": "0x00000001"
+        }
+      },
+      {
+        "input": {
+          "alu_result": 0,
+          "mem_data": "0x00000010",
+          "load_data_sel": 1
+        },
+        "expected_output": {
+          "wb_data": "0x00000010"
+        }
+      },
+      {
+        "input": {
+          "alu_result": "0x00000324",
+          "mem_data": "0x00000009",
+          "load_data_sel": 1
+        },
+        "expected_output": {
+          "wb_data": "0x00000009"
+        }
+      },
+      {
+        "input": {
+          "alu_result": "0x00000004",
+          "mem_data": "0x00000005",
+          "load_data_sel": 1
+        },
+        "expected_output": {
+          "wb_data": "0x00000005"
+        }
       }
-  ]
-}
+
+    ]
+  }
+  
