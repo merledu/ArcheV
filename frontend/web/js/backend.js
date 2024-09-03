@@ -2,29 +2,20 @@ function analyze() {
     let llm_path = document.getElementById("llm-path").value;
     let context_number = document.getElementById("context-number").value;
     let gpu_layers = document.getElementById("gpu-layers").value;
-
     pywebview.api.llm_settings(gpu_layers, context_number, llm_path)
     // pywebview.api.analyze()
 }
 function updateTable(data) {
     const tableBody = document.querySelector('table tbody');
-    tableBody.innerHTML = ''; // Clear existing rows
-
-    // Loop through the data to create table rows
+    tableBody.innerHTML = '';
     data.forEach((item, index) => {
         const row = document.createElement('tr');
-
-        // Create and append the Id cell
         const idCell = document.createElement('td');
         idCell.textContent = index + 1;
         row.appendChild(idCell);
-
-        // Create and append the Module Name cell
         const moduleNameCell = document.createElement('td');
         moduleNameCell.textContent = item[2]; 
         row.appendChild(moduleNameCell);
-
-        // Create and append the Syntactical Verification cell
         const syntacticalCell = document.createElement('td');
         const syntacticalStatus = item[0]; 
         const syntacticalText = document.createElement('p');
@@ -32,8 +23,6 @@ function updateTable(data) {
         syntacticalText.textContent = syntacticalStatus === 'passed' ? 'Passed' : 'Failed';
         syntacticalCell.appendChild(syntacticalText);
         row.appendChild(syntacticalCell);
-
-        // Create and append the Functional Verification cell
         const functionalCell = document.createElement('td');
         const functionalStatus = item[1]; 
         const functionalText = document.createElement('p');
@@ -41,8 +30,6 @@ function updateTable(data) {
         functionalText.textContent = functionalStatus === 'passed' ? 'Passed' : 'Failed';
         functionalCell.appendChild(functionalText);
         row.appendChild(functionalCell);
-
-        // Append the row to the table body
         tableBody.appendChild(row);
     });
 }

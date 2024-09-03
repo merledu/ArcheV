@@ -1,110 +1,200 @@
-{
-    "test_cases": [
-      {
-        "input": {
-          "enable_instr_forward": 1,
-          "enable_pc_forward": 0,
-          "is_br": 0,
-          "is_jal": 0,
-          "is_jalr": 0,
-          "pc_stall": 0,
-          "next_pc_stall": 0,
-          "pc_jalr": 0,
-          "instr_stall": 0,
-          "pc_fd": 0,
-          "imm": 4
+[
+    {
+        "id": 1,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "00000000",
+            "stallPC": "00000000",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "00000000",
+            "br_en": "00000000",
+            "jal_en": "00000000",
+            "imm": "00000000",
+            "RegFD_PC": "00000000",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000000"
         },
-        "expected_output": {
-          "pc_out": 0,
-          "pc_plus_4": 0,
-          "next_pc_out": 0,
-          "instr_addr": 0
+        "outputs": {
+            "pc_out": "00000000",
+            "PC4": "00000004",
+            "nPC_out": "00000004",
+            "addr": "00000000"
         }
-      },
-      {
-        "input": {
-          "enable_instr_forward": 1,
-          "enable_pc_forward": 1,
-          "is_br": 1,
-          "is_jal": 0,
-          "is_jalr": 0,
-          "pc_stall": 0,
-          "next_pc_stall": 0,
-          "pc_jalr": 0,
-          "instr_stall": 0,
-          "pc_fd": 0,
-          "imm": 8
+    },
+    {
+        "id": 2,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "00000293",
+            "stallPC": "00000000",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "00000004",
+            "br_en": "00000000",
+            "jal_en": "00000000",
+            "imm": "00000000",
+            "RegFD_PC": "00000000",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000000"
         },
-        "expected_output": {
-          "pc_out": 0,
-          "pc_plus_4": 0,
-          "next_pc_out": 0,
-          "instr_addr": 0
+        "outputs": {
+            "pc_out": "00000004",
+            "PC4": "00000008",
+            "nPC_out": "00000008",
+            "addr": "00000001"
         }
-      },
-      {
-        "input": {
-          "enable_instr_forward": 0,
-          "enable_pc_forward": 1,
-          "is_br": 0,
-          "is_jal": 0,
-          "is_jalr": 0,
-          "pc_stall": 0,
-          "next_pc_stall": 0,
-          "pc_jalr": 0,
-          "instr_stall": 0,
-          "pc_fd": 0,
-          "imm": 0
+    },
+    {
+        "id": 3,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "00000293",
+            "stallPC": "00000004",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "00000008",
+            "br_en": "00000000",
+            "jal_en": "00000000",
+            "imm": "00000000",
+            "RegFD_PC": "00000004",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000000"
         },
-        "expected_output": {
-          "pc_out": 0,
-          "pc_plus_4": 0,
-          "next_pc_out": 0,
-          "instr_addr": 0
+        "outputs": {
+            "pc_out": "00000008",
+            "PC4": "0000000C",
+            "nPC_out": "0000000C",
+            "addr": "00000002"
         }
-      },
-      {
-        "input": {
-          "enable_instr_forward": 1,
-          "enable_pc_forward": 0,
-          "is_br": 0,
-          "is_jal": 1,
-          "is_jalr": 0,
-          "pc_stall": 0,
-          "next_pc_stall": 0,
-          "pc_jalr": 0,
-          "instr_stall": 0,
-          "pc_fd": 0,
-          "imm": 12
+    },
+    {
+        "id": 4,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "00502285",
+            "stallPC": "00000008",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "0000000C",
+            "br_en": "00000000",
+            "jal_en": "00000000",
+            "imm": "00000005",
+            "RegFD_PC": "00000008",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000000"
         },
-        "expected_output": {
-          "pc_out": 0,
-          "pc_plus_4": 0,
-          "next_pc_out": 0,
-          "instr_addr": 0
+        "outputs": {
+            "pc_out": "0000000C",
+            "PC4": "00000010",
+            "nPC_out": "00000010",
+            "addr": "00000003"
         }
-      },
-      {
-        "input": {
-          "enable_instr_forward": 1,
-          "enable_pc_forward": 1,
-          "is_br": 0,
-          "is_jal": 0,
-          "is_jalr": 1,
-          "pc_stall": 0,
-          "next_pc_stall": 0,
-          "pc_jalr": 0,
-          "instr_stall": 0,
-          "pc_fd": 0,
-          "imm": 0
+    },
+    {
+        "id": 5,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "00530D93",
+            "stallPC": "0000000C",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "00000010",
+            "br_en": "00000000",
+            "jal_en": "00000000",
+            "imm": "00000000",
+            "RegFD_PC": "0000000C",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000000"
         },
-        "expected_output": {
-          "pc_out": 0,
-          "pc_plus_4": 0,
-          "next_pc_out": 0,
-          "instr_addr": 0
+        "outputs": {
+            "pc_out": "00000010",
+            "PC4": "00000014",
+            "nPC_out": "00000014",
+            "addr": "00000004"
         }
-      }
-    ]
-  }
-  
+    },
+    {
+        "id": 6,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "0012D803",
+            "stallPC": "00000010",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "00000014",
+            "br_en": "00000000",
+            "jal_en": "00000000",
+            "imm": "00000000",
+            "RegFD_PC": "00000010",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000000"
+        },
+        "outputs": {
+            "pc_out": "00000014",
+            "PC4": "00000018",
+            "nPC_out": "00000018",
+            "addr": "00000005"
+        }
+    },
+    {
+        "id": 7,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "06500073",
+            "stallPC": "00000014",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "00000018",
+            "br_en": "00000000",
+            "jal_en": "00000000",
+            "imm": "00000064",
+            "RegFD_PC": "00000014",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000000"
+        },
+        "outputs": {
+            "pc_out": "00000018",
+            "PC4": "0000001C",
+            "nPC_out": "0000001C",
+            "addr": "00000006"
+        }
+    },
+    {
+        "id": 8,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "00626293",
+            "stallPC": "00000018",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "0000001C",
+            "br_en": "00000000",
+            "jal_en": "00000000",
+            "imm": "00000008",
+            "RegFD_PC": "00000018",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000006"
+        },
+        "outputs": {
+            "pc_out": "0000001C",
+            "PC4": "00000020",
+            "nPC_out": "00000020",
+            "addr": "00000007"
+        }
+    },
+    {
+        "id": 9,
+        "inputs": {
+            "Forward_instr": "00000000",
+            "Stallunit_inst": "FF000073",
+            "stallPC": "0000001C",
+            "forward_PC": "00000000",
+            "StallUnit_PC": "00000020",
+            "br_en": "00000000",
+            "jal_en": "00000001",
+            "imm": "FFFFFFF4",
+            "RegFD_PC": "0000001C",
+            "jalr_en": "00000000",
+            "jalr_PC": "00000000"
+        },
+        "outputs": {
+            "pc_out": "00000000",
+            "PC4": "00000004",
+            "nPC_out": "00000004",
+            "addr": "00000008"
+        }
+    }
+]
