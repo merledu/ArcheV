@@ -1,6 +1,6 @@
 import os
 
-from llama_cpp import Llama
+# from llama_cpp import Llama
 
 from analyzers.linter import lint
 from analyzers.funct import funct
@@ -43,14 +43,14 @@ def read_files_from_directory(directory_path, extension):
 def remove_extension(filename):
     return os.path.splitext(filename)[0]
 
-propmpts_path =  ArcheV_propmts 
+propmpts_path =  ARCHEV_PROMPTS 
 prompts, prompts_filename = read_files_from_directory(propmpts_path, ".txt")
-json_file_path = ArcheV_json_files 
+json_file_path = FUNCT_VERIF 
 json_files, json_names = read_files_from_directory(json_file_path, ".json")  
 
 def master_function(json_str, verilog_code):  
     # Syntactical verification
-    syntactical_verification_results = linter.run_verilator_lint(verilog_code)
+    syntactical_verification_results = lint(verilog_code)
     # Functional verification
     functional_verification_results = funct.functional_verification(verilog_code, json_str)
     return syntactical_verification_results, functional_verification_results
