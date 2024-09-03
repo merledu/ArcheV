@@ -1,6 +1,7 @@
 {
     "test_cases": [
       {
+        "id":1,
         "inputs": {
           "instruction": 0
         },
@@ -24,6 +25,7 @@
         }
       },
       {
+        "id":2,
         "inputs": {
           "instruction": "00000293"
         },
@@ -47,6 +49,7 @@
         }
       },
       {
+        "id":3,
         "inputs": {
           "instruction": "00500313"
         },
@@ -69,6 +72,7 @@
         }
       },
       {
+        "id":4,
         "inputs": {
           "instruction": "00530433"
         },
@@ -92,6 +96,7 @@
       }
       ,
       {
+        "id":5,
         "inputs": {
           "instruction": "00128293"
         },
@@ -114,6 +119,7 @@
         }
       },
       {
+        "id":6,
         "inputs": {
           "instruction": "06502223"
         },
@@ -137,6 +143,7 @@
       }
       ,
       {
+        "id":7,
         "inputs": {
           "instruction": "00628463"
         },
@@ -160,6 +167,7 @@
       }
       ,
       {
+        "id":8,
         "inputs": {
           "instruction": "FF5FF0EF"
         },
@@ -182,6 +190,7 @@
         }
       },
       {
+        "id":9,
         "inputs": {
           "instruction": "00000293"
         },
@@ -204,6 +213,7 @@
         }
       },
       {
+        "id":10,
         "inputs": {
           "instruction": "06502223"
         },

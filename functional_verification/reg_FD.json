@@ -1,5 +1,5 @@
 {
-  "test_case_1": [
+  "test_cases": [
       {
           "id": 1,
           "inputs": {
@@ -12,9 +12,7 @@
               "instruction_out": "00000293",
               "_pc4_out": "00000004"
           }
-      }
-  ],
-  "test_case_2": [
+      },
       {
           "id": 2,
           "inputs": {
@@ -27,9 +25,7 @@
               "instruction_out": "00000293",
               "_pc4_out": "00000008"
           }
-      }
-  ],
-  "test_case_3": [
+      },
       {
           "id": 3,
           "inputs": {
@@ -42,9 +38,7 @@
               "instruction_out": "00500313",
               "_pc4_out": "0000000C"
           }
-      }
-  ],
-  "test_case_4": [
+      },
       {
           "id": 4,
           "inputs": {
@@ -57,9 +51,7 @@
               "instruction_out": "00530433",
               "_pc4_out": "00000010"
           }
-      }
-  ],
-  "test_case_5": [
+      },
       {
           "id": 5,
           "inputs": {
@@ -72,9 +64,7 @@
               "instruction_out": "00128293",
               "_pc4_out": "00000014"
           }
-      }
-  ],
-  "test_case_6": [
+      },
       {
           "id": 6,
           "inputs": {
@@ -87,9 +77,7 @@
               "instruction_out": "06502223",
               "_pc4_out": "00000018"
           }
-      }
-  ],
-  "test_case_7": [
+      },
       {
           "id": 7,
           "inputs": {
@@ -102,9 +90,7 @@
               "instruction_out": "00628463",
               "_pc4_out": "0000001C"
           }
-      }
-  ],
-  "test_case_8": [
+      },
       {
           "id": 8,
           "inputs": {
@@ -117,9 +103,7 @@
               "instruction_out": "FF5FF0EF",
               "_pc4_out": "00000020"
           }
-      }
-  ],
-  "test_case_9": [
+      },
       {
           "id": 9,
           "inputs": {
@@ -132,9 +116,7 @@
               "instruction_out": "00000000",
               "_pc4_out": "00000004"
           }
-      }
-  ],
-  "test_case_10": [
+      },
       {
           "id": 10,
           "inputs": {

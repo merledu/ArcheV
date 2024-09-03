@@ -1,5 +1,5 @@
 {
-  "test_case_1": [
+"test_cases": [
       {
           "id": 1,
           "inputs": {
@@ -16,9 +16,7 @@
               "wr_en_out": "1",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_2": [
+      },
       {
           "id": 2,
           "inputs": {
@@ -35,9 +33,7 @@
               "wr_en_out": "1",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_3": [
+      },
       {
           "id": 3,
           "inputs": {
@@ -54,9 +50,7 @@
               "wr_en_out": "1",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_4": [
+      },
       {
           "id": 4,
           "inputs": {
@@ -73,9 +67,7 @@
               "wr_en_out": "1",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_5": [
+      },
       {
           "id": 5,
           "inputs": {
@@ -92,9 +84,7 @@
               "wr_en_out": "0",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_6": [
+      },
       {
           "id": 6,
           "inputs": {
@@ -111,9 +101,7 @@
               "wr_en_out": "0",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_7": [
+      },
       {
           "id": 7,
           "inputs": {
@@ -130,9 +118,7 @@
               "wr_en_out": "1",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_8": [
+      },
       {
           "id": 8,
           "inputs": {
@@ -149,9 +135,7 @@
               "wr_en_out": "0",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_9": [
+      },
       {
           "id": 9,
           "inputs": {
@@ -168,9 +152,7 @@
               "wr_en_out": "1",
               "load_en_out": "0"
           }
-      }
-  ],
-  "test_case_10": [
+      },
       {
           "id": 10,
           "inputs": {

@@ -1,7 +1,7 @@
 {
-  "test_case_1": [
+  "test_cases": [
     {
-      "id": "test_case_1",
+      "id": "1",
       "inputs": {
         "alu_in": "00000000",
         "rd_addr_in": "00000005",
@@ -33,11 +33,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_2": [
+    },
     {
-      "id": "test_case_2",
+      "id": "2",
       "inputs": {
         "alu_in": "00000005",
         "rd_addr_in": "00000006",
@@ -69,11 +67,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_3": [
+    },
     {
-      "id": "test_case_3",
+      "id": "3",
       "inputs": {
         "alu_in": "00000005",
         "rd_addr_in": "00000008",
@@ -105,11 +101,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_4": [
+    },
     {
-      "id": "test_case_4",
+      "id": "4",
       "inputs": {
         "alu_in": "00000001",
         "rd_addr_in": "00000005",
@@ -141,11 +135,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_5": [
+    },
     {
-      "id": "test_case_5",
+      "id": "5",
       "inputs": {
         "alu_in": "00000064",
         "rd_addr_in": "00000000",
@@ -177,11 +169,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_6": [
+    },
     {
-      "id": "test_case_6",
+      "id": "6",
       "inputs": {
         "alu_in": "00000000",
         "rd_addr_in": "00000000",
@@ -213,11 +203,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_7": [
+    },
     {
-      "id": "test_case_7",
+      "id": "7",
       "inputs": {
         "alu_in": "00000064",
         "rd_addr_in": "00000001",
@@ -249,11 +237,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_8": [
+    },
     {
-      "id": "test_case_8",
+      "id": "8",
       "inputs": {
         "alu_in": "00000064",
         "rd_addr_in": "00000005",
@@ -285,11 +271,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_9": [
+    },
     {
-      "id": "test_case_9",
+      "id": "9",
       "inputs": {
         "alu_in": "00000003",
         "rd_addr_in": "00000001",
@@ -321,11 +305,9 @@
         "lbu_en_out": "0",
         "lh_en_out": "0"
       }
-    }
-  ],
-  "test_case_10": [
+    },
     {
-      "id": "test_case_10",
+      "id": "10",
       "inputs": {
         "alu_in": "00000001",
         "rd_addr_in": "00000001",
