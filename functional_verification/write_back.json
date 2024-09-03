@@ -69,6 +69,7 @@
         }
       },
       {
+        "id":7,
         "input": {
           "alu_result": "0x00000001",
           "mem_data": 0,
@@ -79,6 +80,7 @@
         }
       },
       {
+        "id":8,
         "input": {
           "alu_result": 0,
           "mem_data": "0x00000010",
@@ -89,6 +91,7 @@
         }
       },
       {
+        "id":9,
         "input": {
           "alu_result": "0x00000324",
           "mem_data": "0x00000009",
@@ -99,6 +102,7 @@
         }
       },
       {
+        "id":10,
         "input": {
           "alu_result": "0x00000004",
           "mem_data": "0x00000005",
