@@ -1,9 +1,9 @@
-from globals import LLM
+from globals import llm
 
 
 def llm_response(sys_prompt, user_prompt):
     while True:
-        response = LLM.create_chat_completion(
+        response = llm.create_chat_completion(
             messages=[{'role': 'system', 'content': sys_prompt},
                       {'role': 'user', 'content': user_prompt}],
             max_tokens=None

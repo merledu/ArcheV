@@ -75,7 +75,7 @@ endmodule
 
     return result.stdout
 
-def functional_verification(verilog_code, json_string):
+def funct(verilog_code, json_string):
     try:
         # Load test cases from the JSON string
         test_cases = json.loads(json_string)["test_cases"]
@@ -147,5 +147,4 @@ json_string = """
 }
 """
 
-result = functional_verification(verilog_code, json_string)
 

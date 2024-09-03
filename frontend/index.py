@@ -1,10 +1,9 @@
 import os
-
 # from llama_cpp import Llama
 
 from analyzers.linter import lint
 from analyzers.funct import funct
-from globals import ARCHEV_PROMPTS, FUNCT_VERIF, llm
+from globals import ARCHEV_PROMPTS, FUNCT_REF, llm
 from llm_interface.llm_interface import llm_response
 
 
@@ -45,7 +44,7 @@ def remove_extension(filename):
 
 propmpts_path =  ARCHEV_PROMPTS 
 prompts, prompts_filename = read_files_from_directory(propmpts_path, ".txt")
-json_file_path = FUNCT_VERIF 
+json_file_path = FUNCT_REF 
 json_files, json_names = read_files_from_directory(json_file_path, ".json")  
 
 def master_function(json_str, verilog_code):  
