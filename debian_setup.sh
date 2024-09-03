@@ -11,3 +11,7 @@ python3.10 -m venv .venv
 source $ARCHEV_ROOT/.venv/bin/activate
 pip3 install wheel pywebview pygobject
 
+
+# Directories
+mkdir tmp
+
