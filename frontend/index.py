@@ -11,6 +11,7 @@ def read_file_content(file_path):
     with open(file_path, 'r') as file:
         return file.read().strip()
 
+
 def read_files_from_directory(directory_path, extension):
     filenames = []
     contents = []
@@ -28,8 +29,8 @@ def read_files_from_directory(directory_path, extension):
             content = read_file_content(file_path)
             filenames.append(filename)
             contents.append(content)
-
     return contents, filenames
+
 
 # Function to remove the file extension
 def remove_extension(filename):
@@ -40,15 +41,16 @@ prompts, prompts_filename = read_files_from_directory(propmpts_path, ".txt")
 json_file_path = FUNCT_REF 
 json_files, json_names = read_files_from_directory(json_file_path, ".json")  
 
-def master_function(json_str, verilog_code):  
-    # Syntactical verification
-    syntactical_verification_results = lint(verilog_code)
-    # Functional verification
-    functional_verification_results = funct.functional_verification(verilog_code, json_str)
-    return syntactical_verification_results, functional_verification_results
+# def master_function(json_str, verilog_code):  
+#     # Syntactical verification
+#     syntactical_verification_results = lint(verilog_code)
+#     # Functional verification
+#     functional_verification_results = funct.functional_verification(verilog_code, json_str)
+#     return syntactical_verification_results, functional_verification_results
 
 
 def analyze(llm_path, context_length, gpu_layers):
+    
     results = []  
 
     for i in range(len(prompts)):
@@ -76,8 +78,11 @@ endmodule
                 break  
 
         if str:  
-            syntactical, functional = master_function(str, verilog_code)
+            syntactical_verification_results = lint(verilog_code)
+            functional_verification_results = funct.functional_verification(verilog_code, str)
             
-            results.append((syntactical, functional, prompt_name_without_extension))
+            # syntactical, functional = master_function(str, verilog_code)
+            
+            results.append((syntactical_verification_results, functional_verification_results, prompt_name_without_extension))
 
     return results
