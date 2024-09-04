@@ -1,14 +1,14 @@
 import os
 
-from globals import ARCHEV_PROMPTS, FUNCT_REF, llm
+from globals import ARCHEV_PROMPTS, FUNCT_REF, llm,SYSTEM_PROMPTS,ARCHEV_TMP
 from llm_interface.llm_interface import load_llm, llm_response
 from analyzers.linter import lint
 from analyzers.funct import funct
 
 
-# Providing prompts to LLM
-def read_file_content(file_path):
-    with open(file_path, 'r') as file:
+
+def read_file_content(file):
+    
         return file.read().strip()
 
 
@@ -50,32 +50,12 @@ json_files, json_names = read_files_from_directory(json_file_path, ".json")
 
 
 def analyze(llm_path, context_length, gpu_layers):
-    
-    results = []  
+    results = {} 
+    for root,sub_dir,files in os.walk(ARCHEV_PROMPTS):
+            for file in files:
+                user_propmpts = read_file_content(file)
+                llm_verilog_code=llm_response(SYSTEM_PROMPTS,user_propmpts)
 
-    for i in range(len(prompts)):
-        
-        verilog_code = """  
-
-    
-"""
-
-        str = ""  
-
-        prompt_name_without_extension = remove_extension(prompts_filename[i])
-
-        for j in range(len(json_files)):  
-            json_name_without_extension = remove_extension(json_names[j])
-            if prompt_name_without_extension == json_name_without_extension:
-                str = "\n".join(json_files[j])
-                break  
-
-        if str:  
-            syntactical_verification_results = lint(verilog_code)
-            functional_verification_results = funct.functional_verification(verilog_code, str)
-            
-            # syntactical, functional = master_function(str, verilog_code)
-            
-            results.append((syntactical_verification_results, functional_verification_results, prompt_name_without_extension))
-
+                with open(ARCHEV_TMP,'w') as tmp:
+                    tmp.write(llm_verilog_code)      
     return results
