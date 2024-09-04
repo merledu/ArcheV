@@ -443,9 +443,12 @@ menun_logo .git {
     animation: fadeIn 1s ease-out;
 }
 #arrow {
-    color:white;
-    font-weight: 900;
-    cursor: pointer ;
-    font-size: 50px;
-    margin-top: 150px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
