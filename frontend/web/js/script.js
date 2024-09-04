@@ -24,24 +24,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    document.getElementById('check').addEventListener('click', function() {
-        const llmPath = document.getElementById('llm-path').value.trim();
-        const gpuLayers = document.getElementById('gpu-layers').value.trim();
-        const contextNumber = document.getElementById('context-number').value.trim();
-        const errorMessageDiv = document.getElementById('error-message');
-        if (!llmPath || !gpuLayers || !contextNumber) {
-            errorMessageDiv.textContent = 'Please fill in all fields.';
-            errorMessageDiv.style.display = 'block';
-            return
-        }
-        errorMessageDiv.style.display = 'none';
-        const thirdSection = document.getElementById('third');
-        if (thirdSection) {
-            thirdSection.style.display = 'block'; 
-            thirdSection.scrollIntoView({ behavior: 'smooth' });
-            updateProgressBar(100); 
-        }
-    });    
+    // document.getElementById('check').addEventListener('click', function() {
+    //     const llmPath = document.getElementById('llm-path').value.trim();
+    //     const gpuLayers = document.getElementById('gpu-layers').value.trim();
+    //     const contextNumber = document.getElementById('context-number').value.trim();
+    //     const errorMessageDiv = document.getElementById('error-message');
+    //     if (!llmPath || !gpuLayers || !contextNumber) {
+    //         errorMessageDiv.textContent = 'Please fill in all fields.';
+    //         errorMessageDiv.style.display = 'block';
+    //         return
+    //     }
+    //     errorMessageDiv.style.display = 'none';
+    //     const thirdSection = document.getElementById('third');
+    //     if (thirdSection) {
+    //         thirdSection.style.display = 'block'; 
+    //         thirdSection.scrollIntoView({ behavior: 'smooth' });
+    //         updateProgressBar(100); 
+    //     }
+    // });    
     document.getElementById('select-folder').addEventListener('click', selectPath);
     function updateProgressBar(percentage) {
         const progressBar = document.getElementById('progressBar');

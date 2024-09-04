@@ -32,10 +32,10 @@
                     <button type="button" class="input-9 get-started-btn" id="select-folder">Select Folder</button>
                 </div>
                 <input type="text" id="gpu-layers" class="input-9" placeholder="GPU Layers">
-                <input type="text" id="context-number" class="input-9" placeholder="Context Number">
+                <input type="text" id="context-length" class="input-9" placeholder="Context Length">
                 <div class="button-container">
                 <div id="error-message"></div>
-                <button id="check" type="button" class="button blue gradient">Analyze</button>
+                <button id="check" type="button" class="button blue gradient" onclick="analyze()">Analyze</button>
             </div>
             <input type="file" id="folder-selector" style="display: none;" webkitdirectory mozdirectory odirectory directory>
         </div>            
@@ -113,5 +113,5 @@
 </body>
 <script src="frontend/web/js/min.js"></script>
 <script src="js/script.js" defer></script>
-<script src="js/backend.js" defer></script>
+<script src="js/backend.js"></script>
 </html>

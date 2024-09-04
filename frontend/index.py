@@ -1,16 +1,9 @@
 import os
-# from llama_cpp import Llama
 
+from globals import ARCHEV_PROMPTS, FUNCT_REF, llm
+from llm_interface.llm_interface import load_llm, llm_response
 from analyzers.linter import lint
 from analyzers.funct import funct
-from globals import ARCHEV_PROMPTS, FUNCT_REF, llm
-from llm_interface.llm_interface import llm_response
-
-
-def llm_settings(gpu_layers, context_number, LLM_path):
-    print(llm)
-    #llm settings 
-    pass 
 
 
 # Providing prompts to LLM
@@ -55,7 +48,7 @@ def master_function(json_str, verilog_code):
     return syntactical_verification_results, functional_verification_results
 
 
-def analyze():
+def analyze(llm_path, context_length, gpu_layers):
     results = []  
 
     for i in range(len(prompts)):
