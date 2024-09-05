@@ -41,25 +41,20 @@ prompts, prompts_filename = read_files_from_directory(propmpts_path, ".txt")
 json_file_path = FUNCT_REF 
 json_files, json_names = read_files_from_directory(json_file_path, ".json")  
 
-# def master_function(json_str, verilog_code):  
-#     # Syntactical verification
-#     syntactical_verification_results = lint(verilog_code)
-#     # Functional verification
-#     functional_verification_results = funct.functional_verification(verilog_code, json_str)
-#     return syntactical_verification_results, functional_verification_results
 
 
 def analyze(llm_path, context_length, gpu_layers):
     results = {} 
     for root,sub_dir,files in os.walk(ARCHEV_PROMPTS):
             for file in files:
-                user_propmpts = read_file_content(file)
-                llm_verilog_code=llm_response(SYSTEM_PROMPTS,user_propmpts)
-
+                file_path = os.path.join(root, file)  
+                with open(file_path, "r") as p:
+                    user_prompts = p.read() 
+                llm_verilog_code=llm_response(SYSTEM_PROMPTS,user_prompts)
                 with open(ARCHEV_TMP,'w') as tmp:
                     tmp.write(llm_verilog_code)
                           
-                syntactical_verification = lint(llm_verilog_code)
+                syntactical_verification = lint(ARCHEV_TMP)
             if syntactical_verification == "passed":
                 # Find json and prompt file name
                 prompt_name_without_extension = remove_extension(prompts_filename)
