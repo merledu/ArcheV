@@ -115,3 +115,12 @@ document.addEventListener('DOMContentLoaded', () => {
         element.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+
+function tryagain(){
+  var element = document.getElementsByClassName("second")[0];
+    if (element) {
+        element.style.display = "flex";
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
