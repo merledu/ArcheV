@@ -13,14 +13,12 @@
             <nav class="navbar">
                 <ul class="menu">
                     <li><img src="images/logo.png" class="merl" alt="Merl logo"></li>
-                    </ul>
+                </ul>
             </nav>
             <div class="text">
                 <p>ArcheV</p>
                 <h3>RISC-V RV32I RTL Efficiency Test</h3>
-            <!-- <button id="arrow" onclick="second()">Begin Evaluation</button> -->
-            <button id="arrow"  class="button"  onclick="second()"> Begin Evaluation </button> 
-
+                <button id="arrow"  class="button"  onclick="second()"> Begin Evaluation </button> 
             </div>
         </div>
     </div>
@@ -37,11 +35,11 @@
                 <input type="text" id="gpu-layers" class="input-9" placeholder="GPU Layers">
                 <div class="button-container">
                 <div id="error-message"></div>
-                <button id="check" type="button" class="button blue gradient" onclick="analyze()">Analyze</button>
+                <button onclick="openFileDialog()" type="button" class="button blue gradient" onclick="analyze()">Analyze</button>
             </div>
-            <input type="file" id="folder-selector" style="display: none;" webkitdirectory mozdirectory odirectory directory>
+            <!-- <input type="file" id="folder-selector" style="display: none;" webkitdirectory mozdirectory odirectory directory> -->
         </div>            
-            <!-- Hidden file input for folder selection -->
+            Hidden file input for folder selection
             <input type="file" id="folder-selector" style="display: none;" webkitdirectory mozdirectory odirectory directory>
         </div>
     </div>

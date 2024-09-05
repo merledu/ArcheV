@@ -1,9 +1,9 @@
 html {
     scroll-behavior:smooth; 
 }
-body {
-    overflow: hidden; 
-}
+::-webkit-scrollbar {
+    width: 0;
+  }
 .section {
     scroll-snap-align: start; 
 }
