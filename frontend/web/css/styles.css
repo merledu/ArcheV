@@ -1,9 +1,9 @@
 html {
     scroll-behavior:smooth; 
 }
-body {
-    overflow: hidden; 
-}
+::-webkit-scrollbar {
+    width: 0;
+  }
 .section {
     scroll-snap-align: start; 
 }
@@ -239,7 +239,7 @@ color:black;
 }
 .fourth { 
     background-image: url("../images/background/AI4.jpg"); /* Background image */
-    display: none; /* Flexbox layout */
+    display: none; /*Flexbox layout*/
     justify-content: center; /* Center contents horizontally */
     align-items: center; /* Center contents vertically */
     flex-direction: column; /* Stack items vertically */

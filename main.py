@@ -2,7 +2,7 @@ import webview
 
 from frontend.expose import expose
 
-
+    
 if __name__ == '__main__':
     window = webview.create_window(
         title='ArcheV',
@@ -10,6 +10,5 @@ if __name__ == '__main__':
         width=1200,
         height=600,
         resizable=False,
-    )
+    )    
     webview.start(expose, window)
-

@@ -9,6 +9,7 @@ import json
 
 
 
+<<<<<<< HEAD
 def read_file_content(file):
     
         return file.read().strip()
@@ -64,6 +65,45 @@ def analyze(llm_path, context_length, gpu_layers):
                 "Prompt" : prompt_name,
                 "syntactical_verification": syntactical_verify,
                 "functional_verification": functional_verify
+=======
+
+def analyze(llm_path, context_length, gpu_layers):
+    results = {} 
+    for root , sub_dir, files in os.walk(ARCHEV_PROMPTS):
+        for file in files:
+                file_path = os.path.join(root, file)  
+                file_name = os.path.splitext(file)[0]
+                with open(file_path, "r") as p:
+                    user_prompts = p.read() 
+                llm_verilog_code=llm_response(SYSTEM_PROMPTS , user_prompts)
+                with open(ARCHEV_TMP,'w') as tmp:
+                    tmp.write(llm_verilog_code)
+                          
+                syntactical_verification = lint(ARCHEV_TMP)
+                if syntactical_verification == "passed":
+                # Find json and prompt file name
+                    prompt_name_without_extension = remove_extension(prompts_filename)
+                json_str = None
+                # shayan bhai ko check krwana hai kai json_str = json_files.get(prompt_name_without_extension, None)
+                for j, json_file in enumerate(json_files):
+                    json_name_without_extension = remove_extension(json_files[j])
+                    if prompt_name_without_extension == json_name_without_extension:
+                        json_str = json_file
+                        break
+                
+                # Perform functional verification if jason file is present
+                if json_str:
+                    functional_verification = funct.functional_verification(llm_verilog_code, json_str)
+                else:
+                    functional_verification = "failed"
+        else:
+                functional_verification = "failed"
+
+            # Store the results in the dictionary
+                results[prompt_name_without_extension] = {
+                "syntactical_verification": syntactical_verification,
+                "functional_verification": functional_verification
+>>>>>>> 4f933db56ce02e3fe441c32be662d3f93e6ed391
             }
             id_count += 1
 
