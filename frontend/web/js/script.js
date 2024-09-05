@@ -69,7 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', table);
+
+    function table(){
     const { jsPDF } = window.jspdf;
     function exportTableToJson() {
         const table = document.querySelector('table');
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
               acc[header] = cells[index].innerText;
               return acc;
         }, {});
-      });
+    });
       return data;
     }
 
@@ -99,8 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     document.getElementById('save-json').addEventListener('click', downloadJson);
-  });
-
+  }
 
   function scrollToTop() {
       window.scrollTo(0, 0);
@@ -110,6 +111,15 @@ document.addEventListener('DOMContentLoaded', () => {
   window.onload = scrollToTop;
   function second() {
     var element = document.getElementsByClassName("second")[0];
+    if (element) {
+        element.style.display = "flex";
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+
+function tryagain(){
+  var element = document.getElementsByClassName("second")[0];
     if (element) {
         element.style.display = "flex";
         element.scrollIntoView({ behavior: 'smooth' });
