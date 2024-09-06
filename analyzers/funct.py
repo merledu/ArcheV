@@ -28,4 +28,3 @@ def functional_verification(file_name):
                 return 'failed'
         return 'passed'
 
-
