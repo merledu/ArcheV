@@ -1,9 +1,10 @@
 import os
+import json
 
 from globals import ARCHEV_PROMPTS, FUNCT_REF, llm,SYSTEM_PROMPTS,ARCHEV_TMP
 from llm_interface.llm_interface import load_llm, llm_response
 from analyzers.linter import lint
-from analyzers.funct import funct
+from analyzers.funct import functional_verification
 
 
 
@@ -20,31 +21,26 @@ def analyze(llm_path, context_length, gpu_layers):
                 with open(ARCHEV_TMP,'w') as tmp:
                     tmp.write(llm_verilog_code)
                           
-                syntactical_verification = lint(ARCHEV_TMP)
-                if syntactical_verification == "passed":
+                syntactical_verify = lint(llm_verilog_code)
+                if syntactical_verify:
                 # Find json and prompt file name
-                    prompt_name_without_extension = remove_extension(prompts_filename)
-                json_str = None
-                # shayan bhai ko check krwana hai kai json_str = json_files.get(prompt_name_without_extension, None)
-                for j, json_file in enumerate(json_files):
-                    json_name_without_extension = remove_extension(json_files[j])
-                    if prompt_name_without_extension == json_name_without_extension:
-                        json_str = json_file
-                        break
-                
-                # Perform functional verification if jason file is present
-                if json_str:
-                    functional_verification = funct.functional_verification(llm_verilog_code, json_str)
+                    prompt_name = os.path.splitext(file[:-4])[0]
+                    y = json.loads(file)
+                    # json_name = os.path.splitext(file)[0]
+                    
+                # Perform functional verification if jason file is presen
+                    functional_verify = functional_verification(llm_verilog_code, file[:-4]+".json")
+                   
                 else:
-                    functional_verification = "failed"
-        else:
-                functional_verification = "failed"
-
+                     functional_verify = "failed"
+            
             # Store the results in the dictionary
-                results[prompt_name_without_extension] = {
-                "syntactical_verification": syntactical_verification,
-                "functional_verification": functional_verification
+        results[id_count] = {
+                "Prompt" : prompt_name,
+                "syntactical_verification": syntactical_verify,
+                "functional_verification": functional_verify
             }
+        id_count += 1
 
     return results
                     
