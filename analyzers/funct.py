@@ -5,14 +5,9 @@ import os
 from globals import ARCHEV_TMP, TEST_BENCH, FUNCT_REF
 
 
-def save_verilog_to_file(verilog_code, filename):
-    with open(filename, 'w') as file:
-        file.write(verilog_code)
-
-
 def functional_verification(file_name):
-    test_cases = json.load(file_name)["test_cases"]
-    test_bench = os.path.join(FUNCT_REF , file_name + '_tb.v')
+    test_cases = json.load(os.path.join(FUNCT_REF , file_name + '_tb.v'))["test_cases"]
+    test_bench = os.path.join(TEST_BENCH , file_name + '_tb.v')
     llm_code = os.path.join(ARCHEV_TMP , file_name + '.v')
 
     for test_case in test_cases:
@@ -28,5 +23,5 @@ def functional_verification(file_name):
                     output_dict["y"] = int(value.strip())
             if output_dict != expected_output:
                 return 'failed'
-        return 'passed'
+    return 'passed'
 
