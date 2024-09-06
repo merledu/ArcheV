@@ -1,5 +1,6 @@
 import subprocess
 import json
+import os
 
 from globals import ARCHEV_TMP, TEST_BENCH, FUNCT_REF
 
@@ -11,11 +12,13 @@ def save_verilog_to_file(verilog_code, filename):
 
 def functional_verification(file_name):
     test_cases = json.load(file_name)["test_cases"]
-    with open(TEST_BENCH, 'r', encoding = "uft-8") as r:
-        for test_case in test_cases:
+    test_bench = os.path.join(FUNCT_REF , file_name + '_tb.v')
+    llm_code = os.path.join(ARCHEV_TMP , file_name + '.v')
+
+    for test_case in test_cases:
             test_input = test_case["input"]
             expected_output = test_case["expected_output"]
-            subprocess.run(['iverilog', '-o', 'simulation.out', r.read()], capture_output=True, text=True)
+            subprocess.run(['iverilog', '-o', 'simulation.out', test_bench, llm_code], capture_output=True, text=True)
             result = subprocess.run(['vvp', 'simulation.out'], capture_output=True, text=True)
             output = result.stdout
             output_dict = {}
