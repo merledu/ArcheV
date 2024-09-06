@@ -51,7 +51,7 @@ module ALU_testbench;
         pc_in = 32'h00000010;
         src1_data = 32'sd20;
         src2_data = 32'sd15;
-        imm_val = 32'sd5;
+        imm_val = 32'SD5;
         imm_sel = 0;
         add_en = 1;
         sub_en = 0;
