@@ -1,7 +1,7 @@
 import subprocess
 import json
 
-from globals import ARCHEV_TMP,TEST_BENCH,FUNCT_REF
+from globals import ARCHEV_TMP, TEST_BENCH, FUNCT_REF
 
 
 def save_verilog_to_file(verilog_code, filename):
@@ -11,7 +11,7 @@ def save_verilog_to_file(verilog_code, filename):
 
 def functional_verification(file_name):
     test_cases = json.load(file_name)["test_cases"]
-    with open(ARCHEV_TMP, 'r', encoding = "uft-8") as r:
+    with open(TEST_BENCH, 'r', encoding = "uft-8") as r:
         for test_case in test_cases:
             test_input = test_case["input"]
             expected_output = test_case["expected_output"]
