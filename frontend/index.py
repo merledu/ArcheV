@@ -1,13 +1,17 @@
 import os
 import json
+
 from globals import ARCHEV_PROMPTS, FUNCT_REF, llm,SYSTEM_PROMPTS,ARCHEV_TMP
 from llm_interface.llm_interface import load_llm, llm_response
 from analyzers.linter import lint
 from analyzers.funct import functional_verification
 
 
+
+
 def analyze(llm_path, context_length, gpu_layers):
     results = {} 
+    id_count=0
     for root , sub_dir, files in os.walk(ARCHEV_PROMPTS):
         for file in files:
                 file_path = os.path.join(root, file)  
@@ -21,7 +25,7 @@ def analyze(llm_path, context_length, gpu_layers):
                 syntactical_verify = lint(llm_verilog_code)
                 if syntactical_verify:
                 # Find json and prompt file name
-                    prompt_name = os.path.splitext(file[:-4])[0]
+                    # prompt_name = os.path.splitext(file[:-4])[0]
                     y = json.loads(file)
                     # json_name = os.path.splitext(file)[0]
                     
@@ -33,7 +37,7 @@ def analyze(llm_path, context_length, gpu_layers):
             
             # Store the results in the dictionary
         results[id_count] = {
-                "Prompt" : prompt_name,
+                "Prompt" : file_name,
                 "syntactical_verification": syntactical_verify,
                 "functional_verification": functional_verify
             }
