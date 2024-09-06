@@ -1,12 +1,9 @@
 import os
 import json
-
 from globals import ARCHEV_PROMPTS, FUNCT_REF, llm,SYSTEM_PROMPTS,ARCHEV_TMP
 from llm_interface.llm_interface import load_llm, llm_response
 from analyzers.linter import lint
 from analyzers.funct import functional_verification
-
-
 
 
 def analyze(llm_path, context_length, gpu_layers):
