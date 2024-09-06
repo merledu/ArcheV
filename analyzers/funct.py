@@ -1,5 +1,4 @@
 import subprocess
-import os
 import json
 
 from globals import ARCHEV_TMP,TEST_BENCH,FUNCT_REF
