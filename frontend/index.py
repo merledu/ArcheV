@@ -7,7 +7,6 @@ from analyzers.linter import lint
 from analyzers.funct import functional_verification
 
 
-
 def analyze(llm_path, context_length, gpu_layers):
     results = {} 
     id_count = 0
@@ -34,4 +33,4 @@ def analyze(llm_path, context_length, gpu_layers):
         }
         id_count += 1
     return results
-                    
+

@@ -3,6 +3,7 @@ import tempfile
 import os
 import json
 
+from globals import ARCHEV_TMP,TEST_BENCH,FUNCT_REF
 
 from globals import FUNCT_REF
 
@@ -11,31 +12,28 @@ def save_verilog_to_file(verilog_code, filename):
         file.write(verilog_code)
 
 
-def run_verilog_simulation(verilog_code, test_input):
+def functional_verification(file_name):
+    test_cases = json.load(file_name)["test_cases"]
+    
+    with open(ARCHEV_TMP, 'r', encoding = "uft-8") as r:
+        for test_case in test_cases:
 
-    subprocess.run(['iverilog', '-o', 'simulation.out', temp_verilog_file], capture_output=True, text=True)
-    result = subprocess.run(['vvp', 'simulation.out'], capture_output=True, text=True)
-    return result.stdout
+            test_input = test_case["input"]
+            expected_output = test_case["expected_output"]
 
+            subprocess.run(['iverilog', '-o', 'simulation.out', r.read()], capture_output=True, text=True)
+            result = subprocess.run(['vvp', 'simulation.out'], capture_output=True, text=True)
 
-def functional_verification(verilog_code, json_string):
-    test_cases = json.loads(json_string)["test_cases"]
+            output = result.stdout
 
-    for test_case in test_cases:
-        test_input = test_case["input"]
-        expected_output = test_case["expected_output"]
+            output_dict = {}
+            for line in output.strip().splitlines():
+                if "y =" in line:
+                    _, value = line.split("=")
+                    output_dict["y"] = int(value.strip())
 
-        output = run_verilog_simulation(verilog_code, test_input)
+            if output_dict != expected_output:
+                return 'failed'
 
-        output_dict = {}
-        for line in output.strip().splitlines():
-            if "y =" in line:
-                _, value = line.split("=")
-                output_dict["y"] = int(value.strip())
+        return 'passed'
 
-        if output_dict != expected_output:
-            return 'failed'
-
-    return 'passed'
-result = functional_verification(verilog_code, json_string)
-print(result)
