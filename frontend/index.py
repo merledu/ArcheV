@@ -7,11 +7,10 @@ from analyzers.linter import lint
 from analyzers.funct import functional_verification
 
 
-
-
 def analyze(llm_path, context_length, gpu_layers):
     results = {} 
     id_count=0
+    load_llm(llm_path,context_length,gpu_layers)
     for root , sub_dir, files in os.walk(ARCHEV_PROMPTS):
         for file in files:
                 file_path = os.path.join(root, file)  
@@ -44,4 +43,3 @@ def analyze(llm_path, context_length, gpu_layers):
         id_count += 1
 
     return results
-                    
