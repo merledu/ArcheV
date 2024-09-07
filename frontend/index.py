@@ -8,10 +8,11 @@ from analyzers.funct import functional_verification
 
 
 def analyze(llm_path, context_length, gpu_layers):
+    load_llm(llm_path,context_length,gpu_layers)
     results = {} 
-    id_count = 0
+    
     for root , sub_dir, files in os.walk(ARCHEV_PROMPTS):
-        for file in files:
+        for id_count, file in enumerate(files):
             file_path = os.path.join(root, file)  
             file_name = os.path.splitext(file)[0]
             with open(file_path, "r", encoding="utf-8") as p:
@@ -31,6 +32,5 @@ def analyze(llm_path, context_length, gpu_layers):
             "syntactical_verification": verify_syntactically,
             "functional_verification": verify_functionally
         }
-        id_count += 1
     return results
 
