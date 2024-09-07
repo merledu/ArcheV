@@ -22,54 +22,20 @@ module RegFile_tb;
     );
 
     initial begin
-        // Initialize inputs
-        dest_addr = 5'd0;
-        dest_data = 32'h0;
-        src1_addr = 5'd0;
-        src2_addr = 5'd0;
-        write_enable = 0;
+       file = $fopen("input.txt", "r");
+        while (!$feof(file)) begin
+            status = $fscanf(file, "%h %h %h %h %h",
+                             dest_addr, dest_data, src1_addr,
+                             src2_add, write_enable);
 
-        // Apply test cases
-        #10;
-
-        // Test case 1: Write data to register and read from it
-        $display("Test Case 1: Write and Read");
-        dest_addr = 5'd5;
-        dest_data = 32'hA5A5A5A5;
-        write_enable = 1;
-        #10;
-
-        src1_addr = 5'd5;
-        src2_addr = 5'd0; // Zero address should read 0
-        #10;
-        $display("src1_data: %h, src2_data: %h", src1_data, src2_data);
-
-        // Test case 2: Write enable is off, data should not be written
-        $display("Test Case 2: Write Enable Off");
-        write_enable = 0;
-        dest_addr = 5'd10;
-        dest_data = 32'hDEADBEEF;
-        #10;
-
-        src1_addr = 5'd5; // Should still be A5A5A5A5
-        src2_addr = 5'd10; // Should be 0 because write_enable is off
-        #10;
-        $display("src1_data: %h, src2_data: %h", src1_data, src2_data);
-
-        // Test case 3: Write to zero address, should not affect register file
-        $display("Test Case 3: Write to Zero Address");
-        write_enable = 1;
-        dest_addr = 5'd0; // Zero address, should not change any data
-        dest_data = 32'h12345678;
-        #10;
-
-        src1_addr = 5'd5; // Should still be A5A5A5A5
-        src2_addr = 5'd10; // Should still be 0
-        #10;
-        $display("src1_data: %h, src2_data: %h", src1_data, src2_data);
-
-        // End simulation
+            if (status == 18) begin
+                #10; 
+                $display("%h", rc1_data);
+                $display("%h", src2_data);
+                $display("-"); 
+            end
+        end
+        $fclose(file);
         $finish;
     end
-
 endmodule

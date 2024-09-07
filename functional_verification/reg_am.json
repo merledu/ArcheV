@@ -20,7 +20,7 @@
       },
       "outputs": {
         "alu_out": "00000000",
-        "rd_addr_out": "00000005",
+        "rd_addr_out": "00005",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -54,7 +54,7 @@
       },
       "outputs": {
         "alu_out": "00000000",
-        "rd_addr_out": "00000005",
+        "rd_addr_out": "00005",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -88,7 +88,7 @@
       },
       "outputs": {
         "alu_out": "00000005",
-        "rd_addr_out": "00000006",
+        "rd_addr_out": "00006",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -122,7 +122,7 @@
       },
       "outputs": {
         "alu_out": "00000005",
-        "rd_addr_out": "00000008",
+        "rd_addr_out": "00008",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -156,7 +156,7 @@
       },
       "outputs": {
         "alu_out": "00000001",
-        "rd_addr_out": "00000005",
+        "rd_addr_out": "00005",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -190,7 +190,7 @@
       },
       "outputs": {
         "alu_out": "00000064",
-        "rd_addr_out": "00000000",
+        "rd_addr_out": "00000",
         "rs2_data_out": "00000001",
         "wr_en_out": "0",
         "str_en_out": "1",
@@ -224,7 +224,7 @@
       },
       "outputs": {
         "alu_out": "00000001",
-        "rd_addr_out": "00000001",
+        "rd_addr_out": "00001",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -258,7 +258,7 @@
       },
       "outputs": {
         "alu_out": "00000001",
-        "rd_addr_out": "00000005",
+        "rd_addr_out": "00005",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -292,7 +292,7 @@
       },
       "outputs": {
         "alu_out": "00000000",
-        "rd_addr_out": "00000001",
+        "rd_addr_out": "00001",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -326,7 +326,7 @@
       },
       "outputs": {
         "alu_out": "00000000",
-        "rd_addr_out": "00000001",
+        "rd_addr_out": "00001",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",

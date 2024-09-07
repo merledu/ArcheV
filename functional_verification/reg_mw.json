@@ -12,7 +12,7 @@
           "outputs": {
               "alu_out": "00000000",
               "mem_data_out": "00000000",
-              "rd_addr_out": "05",
+              "rd_addr_out": "00005",
               "wr_en_out": "1",
               "load_en_out": "0"
           }
@@ -29,7 +29,7 @@
           "outputs": {
               "alu_out": "00000005",
               "mem_data_out": "00000000",
-              "rd_addr_out": "06",
+              "rd_addr_out": "00006",
               "wr_en_out": "1",
               "load_en_out": "0"
           }
@@ -46,7 +46,7 @@
           "outputs": {
               "alu_out": "00000005",
               "mem_data_out": "00000000",
-              "rd_addr_out": "08",
+              "rd_addr_out": "00008",
               "wr_en_out": "1",
               "load_en_out": "0"
           }
@@ -63,7 +63,7 @@
           "outputs": {
               "alu_out": "00000001",
               "mem_data_out": "00000000",
-              "rd_addr_out": "05",
+              "rd_addr_out": "00005",
               "wr_en_out": "1",
               "load_en_out": "0"
           }
@@ -80,7 +80,7 @@
           "outputs": {
               "alu_out": "00000064",
               "mem_data_out": "00000000",
-              "rd_addr_out": "00",
+              "rd_addr_out": "00000",
               "wr_en_out": "0",
               "load_en_out": "0"
           }
@@ -97,7 +97,7 @@
           "outputs": {
               "alu_out": "00000000",
               "mem_data_out": "00000000",
-              "rd_addr_out": "00",
+              "rd_addr_out": "00000",
               "wr_en_out": "0",
               "load_en_out": "0"
           }
@@ -114,7 +114,7 @@
           "outputs": {
               "alu_out": "00000000",
               "mem_data_out": "00000000",
-              "rd_addr_out": "05",
+              "rd_addr_out": "00005",
               "wr_en_out": "1",
               "load_en_out": "0"
           }
@@ -131,7 +131,7 @@
           "outputs": {
               "alu_out": "00000000",
               "mem_data_out": "00000000",
-              "rd_addr_out": "00",
+              "rd_addr_out": "00000",
               "wr_en_out": "0",
               "load_en_out": "0"
           }
@@ -148,7 +148,7 @@
           "outputs": {
               "alu_out": "00000000",
               "mem_data_out": "00000000",
-              "rd_addr_out": "05",
+              "rd_addr_out": "00005",
               "wr_en_out": "1",
               "load_en_out": "0"
           }
@@ -165,7 +165,7 @@
           "outputs": {
               "alu_out": "00000000",
               "mem_data_out": "00000000",
-              "rd_addr_out": "00",
+              "rd_addr_out": "00000",
               "wr_en_out": "0",
               "load_en_out": "0"
           }
