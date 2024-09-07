@@ -9,5 +9,6 @@ TMP_VERILOG = os.path.join(ARCHEV_TMP, 'tmp.v')
 SYSTEM_PROMPTS = " Write a Verilog module for the following module description"
 TEST_BENCH = os.path.join(ARCHEV_ROOT, 'test_bench')
 
+print(os.path.join(FUNCT_REF, 'file_name'+'.json'))
 llm = None
 
