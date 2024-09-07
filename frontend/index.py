@@ -8,6 +8,7 @@ from analyzers.funct import functional_verification
 
 
 def analyze(llm_path, context_length, gpu_layers):
+    load_llm(llm_path,context_length,gpu_layers)
     results = {} 
     id_count = 0
     for root , sub_dir, files in os.walk(ARCHEV_PROMPTS):
