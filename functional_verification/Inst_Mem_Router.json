@@ -3,140 +3,140 @@
     {
       "id":1,
       "inputs": {
-        "addrIn": "00000001",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0001",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "00000293",
         "stallInst": "00000293"
       },
       "outputs": {
-        "addrOut": "00000001",
+        "addrOut": "0001",
         "instOut": "00000293"
       }
     },
     {
       "id":2,
       "inputs": {
-        "addrIn": "00000002",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0002",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "00000293",
         "stallInst": "00000293"
       },
       "outputs": {
-        "addrOut": "00000002",
+        "addrOut": "0002",
         "instOut": "00000293"
       }
     },
     {
       "id":3,
       "inputs": {
-        "addrIn": "00000003",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0003",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "00502285",
         "stallInst": "00502285"
       },
       "outputs": {
-        "addrOut": "00000003",
+        "addrOut": "0003",
         "instOut": "00502285"
       }
     },
     {
       "id":4,
       "inputs": {
-        "addrIn": "00000004",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0004",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "00530D93",
         "stallInst": "00530D93"
       },
       "outputs": {
-        "addrOut": "00000004",
+        "addrOut": "0004",
         "instOut": "00530D93"
       }
     },
     {
       "id":5,
       "inputs": {
-        "addrIn": "00000005",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0005",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "0012D803",
         "stallInst": "0012D803"
       },
       "outputs": {
-        "addrOut": "00000005",
+        "addrOut": "0005",
         "instOut": "0012D803"
       }
     },
     {
       "id":6,
       "inputs": {
-        "addrIn": "00000006",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0006",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "06500073",
         "stallInst": "06500073"
       },
       "outputs": {
-        "addrOut": "00000006",
+        "addrOut": "0006",
         "instOut": "06500073"
       }
     },
     {
       "id":7,
       "inputs": {
-        "addrIn": "00000007",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0007",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "00626293",
         "stallInst": "00626293"
       },
       "outputs": {
-        "addrOut": "00000007",
+        "addrOut": "0007",
         "instOut": "00626293"
       }
     },
     {
       "id":8,
       "inputs": {
-        "addrIn": "00000000",
-        "jumpStallEn": "00000001",
-        "stallEn": "00000000",
+        "addrIn": "0000",
+        "jumpStallEn": "1",
+        "stallEn": "0",
         "memInstIn": "FF000073",
         "stallInst": "FF000073"
       },
       "outputs": {
-        "addrOut": "00000000",
+        "addrOut": "0000",
         "instOut": "00000000"
       }
     },
     {
       "id":9,
       "inputs": {
-        "addrIn": "00000004",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0004",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "06442D03",
         "stallInst": "00000000"
       },
       "outputs": {
-        "addrOut": "00000004",
+        "addrOut": "0004",
         "instOut": "06442D03"
       }
     },
     {
       "id":10,
       "inputs": {
-        "addrIn": "00000005",
-        "jumpStallEn": "00000000",
-        "stallEn": "00000000",
+        "addrIn": "0005",
+        "jumpStallEn": "0",
+        "stallEn": "0",
         "memInstIn": "00000293",
         "stallInst": "00000293"
       },
       "outputs": {
-        "addrOut": "00000005",
+        "addrOut": "0005",
         "instOut": "00000293"
       }
     }
