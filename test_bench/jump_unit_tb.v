@@ -49,7 +49,7 @@ module junp_unit_tb;
         file = $fopen("input.txt", "r");
        
         while (!$feof(file)) begin
-            status = $fscanf(file, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d",
+            status = $fscanf(file, "%h %h %h %h %h %h %h %h %h %h %h %h %h %h",
                              rs1_data, rs2_data, alu, RegAM_alu_out,
                              WriteBack_rd_data, Memory_out, func3, b_id,
                              j_id, i_jalr_id, opcode, forward_jump_operand1,
@@ -57,11 +57,11 @@ module junp_unit_tb;
             if (status == 14) 
             begin
                 #10;
-                $display("br_en: %d", br_en);
-                $display("b_en: %d", b_en);
-                $display("jal_en: %d", jal_en);
-                $display("jalr_en: %d", jalr_en);
-                $display("jalr_PC: %d", jalr_PC);
+                $display("br_en: %b", br_en);
+                $display("b_en: %b", b_en);
+                $display("jal_en: %b", jal_en);
+                $display("jalr_en: %b", jalr_en);
+                $display("jalr_PC: %h", jalr_PC);
             end
         end
         $display("-");

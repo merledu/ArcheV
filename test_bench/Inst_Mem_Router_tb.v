@@ -25,13 +25,13 @@ module Inst_Mem_Router_tb;
         file = $fopen("input.txt", "r");
        
         while (!$feof(file)) begin
-            status = $fscanf(file, "%d %d %d %d %d",
+            status = $fscanf(file, "%h %b %b %h %h",
                              addrIn, jumpStallEn, stallEn, memInstIn, stallInst);
             if (status == 5) 
             begin
                 #10;
-                $display("addrOut: %d", addrOut);
-                $display("instOut: %d", instOut);
+                $display("addrOut: %h", addrOut);
+                $display("instOut: %h", instOut);
                 $display("-");
 
             end

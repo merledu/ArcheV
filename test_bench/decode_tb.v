@@ -45,27 +45,27 @@ module decode_tb;
         file = $fopen("input.txt", "r");
        
         while (!$feof(file)) begin
-            status = $fscanf(file, "%d",
+            status = $fscanf(file, "%h",
                              instruction);
             if (status == 1) 
             begin
                 #10;
-                $display("opcode: %d", opcode);
-                $display("rd_addr: %d", rd_addr);
-                $display("func3: %d", func3);
-                $display("rs1_addr: %d", rs1_addr);
-                $display("rs2_addr: %d", rs2_addr);
-                $display("func7: %d", func7);
-                $display("imm: %d", imm);
-                $display("r_id: %d", r_id);
-                $display("i_math_id: %d", i_math_id);
-                $display("i_load_id: %d", i_load_id);
-                $display("i_jalr_id: %d", i_jalr_id);
-                $display("s_id: %d", s_id);
-                $display("b_id: %d", b_id);
-                $display("u_auipc_id: %d", u_auipc_id);
-                $display("u_lui_id: %d", u_lui_id);
-                $display("j_id: %d", j_id);
+                $display("opcode: %h", opcode);
+                $display("rd_addr: %h", rd_addr);
+                $display("func3: %h", func3);
+                $display("rs1_addr: %h", rs1_addr);
+                $display("rs2_addr: %h", rs2_addr);
+                $display("func7: %h", func7);
+                $display("imm: %h", imm);
+                $display("r_id: %h", r_id);
+                $display("i_math_id: %h", i_math_id);
+                $display("i_load_id: %h", i_load_id);
+                $display("i_jalr_id: %h", i_jalr_id);
+                $display("s_id: %h", s_id);
+                $display("b_id: %h", b_id);
+                $display("u_auipc_id: %h", u_auipc_id);
+                $display("u_lui_id: %h", u_lui_id);
+                $display("j_id: %h", j_id);
                 $display("-");
 
             end

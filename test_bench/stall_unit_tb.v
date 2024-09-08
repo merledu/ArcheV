@@ -37,18 +37,18 @@ module stall_unit_tb;
         file = $fopen("input.txt", "r");
        
         while (!$feof(file)) begin
-            status = $fscanf(file, "%d %d %d %d %d %d %d",
+            status = $fscanf(file, "%h %b %h %h %h %h %h",
                              RegFD_inst, load_En, RegDA_rd_addr, pc_in,
                              stallPC_in, rs1_addr, rs2_addr);
             if (status == 7) 
             begin
                 #10;
-                $display("forward_inst: %d", forward_inst);
-                $display("forward_PC: %d", forward_PC);
-                $display("stallControl: %d", stallControl);
-                $display("inst: %d", inst);
-                $display("PC_out: %d", PC_out);
-                $display("stallPC_out: %d", stallPC_out);
+                $display("forward_inst: %b", forward_inst);
+                $display("forward_PC: %b", forward_PC);
+                $display("stallControl: %b", stallControl);
+                $display("inst: %h", inst);
+                $display("PC_out: %h", PC_out);
+                $display("stallPC_out: %h", stallPC_out);
                 $display("-");
 
             end

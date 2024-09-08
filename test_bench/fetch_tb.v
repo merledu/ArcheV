@@ -41,16 +41,16 @@ module fetch_tb;
         file = $fopen("input.txt", "r");
        
         while (!$feof(file)) begin
-            status = $fscanf(file, "%d %d %d %d %d %d %d %d %d %d %d",
+            status = $fscanf(file, "%b %h %h %b %h %b %b %h %h %b %h",
                              Forward_instr, Stallunit_inst, stallPC, forward_PC,
                              StallUnit_PC, br_en, jal_en, imm, RegFD_PC, jalr_en, jalr_PC);
             if (status == 11) 
             begin
                 #10;
-                $display("pc_out: %d", pc_out);
-                $display("PC4: %d", PC4);
-                $display("nPC_out: %d", nPC_out);
-                $display("addr: %d", addr);
+                $display("pc_out: %h", pc_out);
+                $display("PC4: %h", PC4);
+                $display("nPC_out: %h", nPC_out);
+                $display("addr: %h", addr);
                 $display("-");
 
             end
