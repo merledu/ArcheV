@@ -24,7 +24,7 @@ module RegFile_tb;
     initial begin
        file = $fopen("input.txt", "r");
         while (!$feof(file)) begin
-            status = $fscanf(file, "%h %h %h %h %h",
+            status = $fscanf(file, "%h %h %h %h %b",
                              dest_addr, dest_data, src1_addr,
                              src2_add, write_enable);
 
