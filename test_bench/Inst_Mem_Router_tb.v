@@ -1,11 +1,11 @@
 module Inst_Mem_Router_tb;
-    reg [31:0] addrIn;  
-    reg [31:0] jumpStallEn;  
-    reg [31:0] stallEn;  
+    reg [15:0] addrIn;  
+    reg jumpStallEn;  
+    reg stallEn;  
     reg [31:0] memInstIn;  
     reg [31:0] stallInst;  
 
-    wire [31:0] addrOut;  
+    wire [15:0] addrOut;  
     wire [31:0] instOut;  
     
     Inst_Mem_Router uut (
@@ -30,8 +30,8 @@ module Inst_Mem_Router_tb;
             if (status == 5) 
             begin
                 #10;
-                $display("addrOut: %h", addrOut);
-                $display("instOut: %h", instOut);
+                $display("%h", addrOut);
+                $display("%h", instOut);
                 $display("-");
 
             end

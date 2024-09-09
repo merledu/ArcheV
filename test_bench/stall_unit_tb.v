@@ -1,15 +1,15 @@
 module stall_unit_tb;
     reg [31:0] RegFD_inst;  
-    reg [31:0] load_En;  
-    reg [31:0] RegDA_rd_addr;  
+    reg load_En;  
+    reg [4:0] RegDA_rd_addr;  
     reg [31:0] pc_in;  
     reg [31:0] stallPC_in;  
-    reg [31:0] rs1_addr;  
-    reg [31:0] rs2_addr;  
+    reg [4:0] rs1_addr;  
+    reg [4:0] rs2_addr;  
 
-    wire [31:0] forward_inst;  
-    wire [31:0] forward_PC;  
-    wire [31:0] stallControl;  
+    wire forward_inst;  
+    wire forward_PC;  
+    wire stallControl;  
     wire [31:0] inst;  
     wire [31:0] PC_out;  
     wire [31:0] stallPC_out;  
@@ -43,12 +43,12 @@ module stall_unit_tb;
             if (status == 7) 
             begin
                 #10;
-                $display("forward_inst: %b", forward_inst);
-                $display("forward_PC: %b", forward_PC);
-                $display("stallControl: %b", stallControl);
-                $display("inst: %h", inst);
-                $display("PC_out: %h", PC_out);
-                $display("stallPC_out: %h", stallPC_out);
+                $display("%b", forward_inst);
+                $display("%b", forward_PC);
+                $display("%b", stallControl);
+                $display("%h", inst);
+                $display("%h", PC_out);
+                $display("%h", stallPC_out);
                 $display("-");
 
             end

@@ -1,22 +1,22 @@
 module decode_tb;
     reg [31:0] instruction;  
 
-    wire [31:0] opcode;  
-    wire [31:0] rd_addr;  
-    wire [31:0] func3;  
-    wire [31:0] rs1_addr;  
-    wire [31:0] rs2_addr;  
-    wire [31:0] func7;  
+    wire [6:0] opcode;  
+    wire [4:0] rd_addr;  
+    wire [2:0] func3;  
+    wire [4:0] rs1_addr;  
+    wire [4:0] rs2_addr;  
+    wire [6:0] func7;  
     wire signed[31:0] imm;  
-    wire [31:0] r_id;  
-    wire [31:0] i_math_id;  
-    wire [31:0] i_load_id;  
-    wire [31:0] i_jalr_id;  
-    wire [31:0] s_id;  
-    wire [31:0] b_id;  
-    wire [31:0] u_auipc_id;  
-    wire [31:0] u_lui_id;  
-    wire [31:0] j_id;  
+    wire [6:0] r_id;  
+    wire [6:0] i_math_id;  
+    wire [6:0] i_load_id;  
+    wire [9:0] i_jalr_id;  
+    wire [6:0] s_id;  
+    wire [6:0] b_id;  
+    wire [6:0] u_auipc_id;  
+    wire [6:0] u_lui_id;  
+    wire [6:0] j_id;  
     
     decode uut (
         .instruction(instruction),
@@ -50,22 +50,22 @@ module decode_tb;
             if (status == 1) 
             begin
                 #10;
-                $display("opcode: %h", opcode);
-                $display("rd_addr: %h", rd_addr);
-                $display("func3: %h", func3);
-                $display("rs1_addr: %h", rs1_addr);
-                $display("rs2_addr: %h", rs2_addr);
-                $display("func7: %h", func7);
-                $display("imm: %h", imm);
-                $display("r_id: %h", r_id);
-                $display("i_math_id: %h", i_math_id);
-                $display("i_load_id: %h", i_load_id);
-                $display("i_jalr_id: %h", i_jalr_id);
-                $display("s_id: %h", s_id);
-                $display("b_id: %h", b_id);
-                $display("u_auipc_id: %h", u_auipc_id);
-                $display("u_lui_id: %h", u_lui_id);
-                $display("j_id: %h", j_id);
+                $display("%h", opcode);
+                $display("%h", rd_addr);
+                $display("%h", func3);
+                $display("%h", rs1_addr);
+                $display("%h", rs2_addr);
+                $display("%h", func7);
+                $display("%h", imm);
+                $display("%h", r_id);
+                $display("%h", i_math_id);
+                $display("%h", i_load_id);
+                $display("%h", i_jalr_id);
+                $display("%h", s_id);
+                $display("%h", b_id);
+                $display("%h", u_auipc_id);
+                $display("%h", u_lui_id);
+                $display("%h", j_id);
                 $display("-");
 
             end

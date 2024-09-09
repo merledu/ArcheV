@@ -1,22 +1,22 @@
 module fetch_tb;
-    reg [31:0] Forward_instr;  
+    reg Forward_instr;  
     reg [31:0] Stallunit_inst;  
     reg [31:0] stallPC;  
-    reg [31:0] forward_PC;  
+    reg forward_PC;  
     reg [31:0] StallUnit_PC;  
-    reg [31:0] br_en;  
-    reg [31:0] jal_en;  
+    reg br_en;  
+    reg jal_en;  
     reg signed [31:0] imm;  
     reg [31:0] RegFD_PC;  
-    reg [31:0] jalr_en;  
+    reg jalr_en;  
     reg [31:0] jalr_PC;  
 
     wire [31:0] pc_out;  
     wire [31:0] PC4;  
     wire [31:0] nPC_out;  
-    wire [31:0] addr;  
+    wire [16:0] addr;  
     
-    fetch uut (
+    Fetch uut (
         .Forward_instr(Forward_instr),
         .Stallunit_inst(Stallunit_inst),
         .stallPC(stallPC),
@@ -36,25 +36,27 @@ module fetch_tb;
 
     integer file;
     integer status;
+    reg [7:0] char;
 
     initial begin
         file = $fopen("input.txt", "r");
-       
+
         while (!$feof(file)) begin
             status = $fscanf(file, "%b %h %h %b %h %b %b %h %h %b %h",
                              Forward_instr, Stallunit_inst, stallPC, forward_PC,
                              StallUnit_PC, br_en, jal_en, imm, RegFD_PC, jalr_en, jalr_PC);
-            if (status == 11) 
-            begin
-                #10;
-                $display("pc_out: %h", pc_out);
-                $display("PC4: %h", PC4);
-                $display("nPC_out: %h", nPC_out);
-                $display("addr: %h", addr);
-                $display("-");
 
+            if (status == 11) begin
+                #10; 
+                $display("%h", pc_out);
+                $display("%h", PC4);
+                $display("%h", nPC_out);
+                $display("%h", addr);
+                $display("-");
+            
             end
         end
+
         $fclose(file);
         $finish;
     end

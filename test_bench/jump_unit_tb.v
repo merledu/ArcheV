@@ -5,22 +5,22 @@ module junp_unit_tb;
     reg signed [31:0] RegAM_alu_out;  
     reg signed [31:0] WriteBack_rd_data;  
     reg signed [31:0] Memory_out;  
-    reg [31:0] func3;  
-    reg [31:0] b_id;  
-    reg [31:0] j_id;  
-    reg [31:0] i_jalr_id;  
-    reg [31:0] opcode;  
-    reg [31:0] forward_jump_operand1;  
-    reg [31:0] forward_jump_operand2;  
+    reg [2:0] func3;  
+    reg [6:0] b_id;  
+    reg [6:0] j_id;  
+    reg [9:0] i_jalr_id;  
+    reg [6:0] opcode;  
+    reg [2:0] forward_jump_operand1;  
+    reg [2:0] forward_jump_operand2;  
     reg signed [31:0] imm;  
 
-    wire [31:0] br_en;  
-    wire [31:0] b_en;  
-    wire [31:0] jal_en;  
-    wire [31:0] jalr_en;  
+    wire br_en;  
+    wire b_en;  
+    wire jal_en;  
+    wire jalr_en;  
     wire [31:0] jalr_PC;  
     
-    jumo_unit uut (
+    jump_unit uut (
         .rs1_data(rs1_data),
         .rs2_data(rs2_data),
         .alu(alu),
@@ -57,11 +57,11 @@ module junp_unit_tb;
             if (status == 14) 
             begin
                 #10;
-                $display("br_en: %b", br_en);
-                $display("b_en: %b", b_en);
-                $display("jal_en: %b", jal_en);
-                $display("jalr_en: %b", jalr_en);
-                $display("jalr_PC: %h", jalr_PC);
+                $display("%b", br_en);
+                $display("%b", b_en);
+                $display("%b", jal_en);
+                $display("%b", jalr_en);
+                $display("%h", jalr_PC);
             end
         end
         $display("-");
