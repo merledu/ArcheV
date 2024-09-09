@@ -18,4 +18,3 @@ def llm_response(sys_prompt, user_prompt):
         if response['choices'][0]['finish_reason'] == 'stop':
             break
     return response['choices'][0]['message']['content']
-
