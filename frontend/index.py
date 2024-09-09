@@ -21,7 +21,7 @@ def analyze(llm_path, context_length, gpu_layers):
             with open(TMP_VERILOG,'w', encoding="utf-8") as tmp:
                 tmp.write(llm_verilog_code)
             verify_syntactically = lint(llm_verilog_code)  
-            verify_functionally = verify_syntactically(file_name) if verify_syntactically else "False"       
+            verify_functionally = verify_syntactically(file_name) if verify_syntactically else False       
         results[id_count] = {
             "Prompt" : file_name,
             "syntactical_verification": verify_syntactically,
