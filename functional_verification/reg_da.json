@@ -179,7 +179,7 @@
                 "forward_src_reg2_in": "0"
             },
             "outputs": {
-                "pc_out": "0000000C",
+                "pc_out": "0000000c",
                 "opcode_out": "33",
                 "dest_reg_addr_out": "08",
                 "funct3_out": "0",

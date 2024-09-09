@@ -1,6 +1,5 @@
 module RegAM_testbench;
 
-    // Testbench signals
     reg signed [31:0] alu_in;
     reg [4:0] rd_addr_in;
     reg signed [31:0] rs2_data_in;
@@ -27,10 +26,10 @@ module RegAM_testbench;
     wire sw_en_out;
     wire lb_en_out;
     wire lhu_en_out;
-    wire bu_en_out;
+    wire lbu_en_out;
     wire lh_en_out;
 
-    // Instantiate the RegAM module
+
     RegAM uut (
         .alu_in(alu_in),
         .rd_addr_in(rd_addr_in),
@@ -58,7 +57,7 @@ module RegAM_testbench;
         .sw_en_out(sw_en_out),
         .lb_en_out(lb_en_out),
         .lhu_en_out(lhu_en_out),
-        .bu_en_out(bu_en_out),
+        .lbu_en_out(lbu_en_out),
         .lh_en_out(lh_en_out)
     );
 
@@ -68,7 +67,7 @@ module RegAM_testbench;
     initial begin
         file = $fopen("input.txt", "r");
         while (!$feof(file)) begin
-            status = $fscanf(file, "%h %h %h %h %b %b %b %b %b %b %b %b %b %b %b %b %b %b",
+            status = $fscanf(file, "%h %h %h %b %b %b %b %b %b %b %b %b %b %b",
                              alu_in, rd_addr_in, rs2_data_in,
                              wr_en_in, str_en_in,
                              sb_en_in, sh_en_in,
@@ -77,9 +76,22 @@ module RegAM_testbench;
                              lw_en_in, lbu_en_in,
                              lhu_en_in);
 
+
             if (status == 14) begin 
                 #10; 
                 $display("%h", alu_out);
+                $display("%h", rd_addr_in);
+                $display("%h", rs2_data_out);
+                $display("%h", wr_en_in);
+                $display("%h", str_en_out);
+                $display("%h", load_en_out);
+                $display("%h", sb_en_out);
+                $display("%h", sh_en_out);
+                $display("%h", sw_en_out);
+                $display("%h", lb_en_out);
+                $display("%h", lhu_en_out);
+                $display("%h", lbu_en_out);
+                $display("%h", lh_en_out);
                 $display("-"); 
             end
         end

@@ -20,7 +20,7 @@
       },
       "outputs": {
         "alu_out": "00000000",
-        "rd_addr_out": "00005",
+        "rd_addr_out": "05",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -53,8 +53,8 @@
         "lhu_en_in": "0"
       },
       "outputs": {
-        "alu_out": "00000000",
-        "rd_addr_out": "00005",
+        "alu_out": "00000005",
+        "rd_addr_out": "06",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -88,7 +88,7 @@
       },
       "outputs": {
         "alu_out": "00000005",
-        "rd_addr_out": "00006",
+        "rd_addr_out": "06",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -122,7 +122,7 @@
       },
       "outputs": {
         "alu_out": "00000005",
-        "rd_addr_out": "00008",
+        "rd_addr_out": "08",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -156,7 +156,7 @@
       },
       "outputs": {
         "alu_out": "00000001",
-        "rd_addr_out": "00005",
+        "rd_addr_out": "05",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -223,10 +223,10 @@
         "lhu_en_in": "0"
       },
       "outputs": {
-        "alu_out": "00000001",
-        "rd_addr_out": "00001",
-        "rs2_data_out": "00000000",
-        "wr_en_out": "1",
+        "alu_out": "00000000",
+        "rd_addr_out": "00",
+        "rs2_data_out": "00000005",
+        "wr_en_out": "0",
         "str_en_out": "0",
         "load_en_out": "0",
         "sb_en_out": "0",
@@ -257,8 +257,8 @@
         "lhu_en_in": "0"
       },
       "outputs": {
-        "alu_out": "00000001",
-        "rd_addr_out": "00005",
+        "alu_out": "00000020",
+        "rd_addr_out": "01",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -292,7 +292,7 @@
       },
       "outputs": {
         "alu_out": "00000000",
-        "rd_addr_out": "00001",
+        "rd_addr_out": "05",
         "rs2_data_out": "00000000",
         "wr_en_out": "1",
         "str_en_out": "0",
@@ -325,15 +325,15 @@
         "lhu_en_in": "0"
       },
       "outputs": {
-        "alu_out": "00000000",
-        "rd_addr_out": "00001",
+        "alu_out": "00000064",
+        "rd_addr_out": "00",
         "rs2_data_out": "00000000",
-        "wr_en_out": "1",
-        "str_en_out": "0",
+        "wr_en_out": "0",
+        "str_en_out": "1",
         "load_en_out": "0",
         "sb_en_out": "0",
         "sh_en_out": "0",
-        "sw_en_out": "0",
+        "sw_en_out": "1",
         "lb_en_out": "0",
         "lhu_en_out": "0",
         "lbu_en_out": "0",
