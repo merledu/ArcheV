@@ -1,6 +1,5 @@
 module RegFD_testbench;
 
-    // Testbench signals
     reg signed [31:0] pc_in;
     reg [31:0] instruction_in;
     reg [31:0] pc_4;
@@ -9,7 +8,7 @@ module RegFD_testbench;
     wire [31:0] instruction_out;
     wire [31:0] next_pc_out;
 
-    // Instantiate the RegFD module
+
     RegFD uut (
         .pc_in(pc_in),
         .instruction_in(instruction_in),
@@ -18,6 +17,9 @@ module RegFD_testbench;
         .instruction_out(instruction_out),
         .next_pc_out(next_pc_out)
     );
+    integer file;
+    integer status;
+
 
     initial begin
         file = $fopen("input.txt", "r");
@@ -25,7 +27,7 @@ module RegFD_testbench;
             status = $fscanf(file, "%h %h %h",
                              pc_in,instruction_in, pc_4);
 
-            if (status == 18) begin
+            if (status == 3) begin
                 #10; 
                 $display("%h", pc_out);
                 $display("%h", instruction_out);
