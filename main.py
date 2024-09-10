@@ -1,6 +1,7 @@
 import webview
 
 from frontend.expose import expose
+from globals import window
 
     
 if __name__ == '__main__':
