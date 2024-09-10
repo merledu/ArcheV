@@ -2,7 +2,7 @@ function analyze() {
     let llm_path = document.getElementById("llm-path").value;
     let context_length = document.getElementById("context-length").value;
     let gpu_layers = document.getElementById("gpu-layers").value;
-    // pywebview.api.analyze(llm_path, context_length, gpu_layers)
+    pywebview.api.analyze(llm_path, context_length, gpu_layers)
 }
 function updateTable(data) {
     const tableBody = document.querySelector('table tbody');
