@@ -1,3 +1,11 @@
+function second() {
+    let element = document.getElementsByClassName("second")[0];
+    if (element) {
+        element.style.display = "flex";
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     function submitForm(event) {
@@ -109,14 +117,6 @@ document.addEventListener('DOMContentLoaded', table);
 
 
   window.onload = scrollToTop;
-  function second() {
-    var element = document.getElementsByClassName("second")[0];
-    if (element) {
-        element.style.display = "flex";
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
 
 function tryagain(){
   var element = document.getElementsByClassName("second")[0];
