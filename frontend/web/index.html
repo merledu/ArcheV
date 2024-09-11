@@ -13,34 +13,35 @@
             <nav class="navbar">
                 <ul class="menu">
                     <li><img src="images/logo.png" class="merl" alt="Merl logo"></li>
-                </ul>
+                    </ul>
             </nav>
             <div class="text">
                 <p>ArcheV</p>
-                <h3>RISC-V RV32I RTL Generation Test</h3>
-                <button id="arrow" class="button" onclick="second()">Begin Evaluation</button> 
+                <h3>RISC-V RV32I RTL Efficiency Test</h3>
+            <span id="arrow" onclick="second()">&#8595;</span>
+
             </div>
         </div>
     </div>
     <!-- Slide 2 -->
     <div class="second" > 
         <div class="overlay">
-            <h1>LLM Settings</h1>          
-            <div id="analyze-form">
-                <div class="input-container">
-                    <input type="text" id="llm-path" class="input-9" placeholder="Select a folder path" required readonly>
-                    <button type="button" class="input-9 get-started-btn" id="select-folder">Select Folder</button>
-                </div>
-                <input type="text" id="context-length" class="input-9" placeholder="Context Length">
-                <input type="text" id="gpu-layers" class="input-9" placeholder="GPU Layers">
-                <div class="button-container">
-                <div id="error-message"></div>
-                <button onclick="openFileDialog()" type="button" class="button blue gradient" onclick="analyze()">Analyze</button>
+          <h1>LLM Settings</h1>          
+          <div id="analyze-form">
+            <div class="input-container">
+                <input type="text" id="llm-path" class="input-9" placeholder="Select a folder path" required>
+                <button type="button" class="input-9 get-started-btn" onclick="selectPath()" id="select-folder">Select Folder</button>
             </div>
-            <!-- <input type="file" id="folder-selector" style="display: none;" webkitdirectory mozdirectory odirectory directory> -->
-        </div>            
-            Hidden file input for folder selection
+            <input type="text" id="gpu-layers" class="input-9" placeholder="GPU Layers">
+            <input type="text" id="context-length" class="input-9" placeholder="Context Number">
+            <div class="button-container">
+                <div id="error-message"></div>
+                <button id="check" type="button" class="button blue gradient" onclick="analyzes()">Analyze</button>
+            </div>
             <input type="file" id="folder-selector" style="display: none;" webkitdirectory mozdirectory odirectory directory>
+          </div>            
+            <!-- Hidden file input for folder selection -->
+            <!-- <input type="file" id="folder-selector" style="display: none;" webkitdirectory mozdirectory odirectory directory> -->
         </div>
     </div>
     <!-- Slide 3 -->
@@ -57,51 +58,50 @@
         <div class="overlay">
             <section class="table__body">
                 <table>
-                    <thead>
-                        <tr>
-                          <th>Id </th>
-                          <th >Module Name </th>
-                          <th>Syntactical Verification </th>
-                          <th>Verification</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Module 1</td>
-                            <td>Syntactical Verification</td>
-                            <td>
-                                <p class="status delivered">Passed</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Module 1</td>
-                            <td>Functional Verification</td>
-                            <td>
-                                <p class="status cancelled">Failed</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Module 1</td>
-                            <td>Functional Verification</td>
-                            <td>
-                                <p class="status delivered">Passed</p>
-                            </td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td>Module 1</td>
-                          <td>Syntactical Verification</td>
-                          <td>
-                              <p class="status cancelled">Failed</p>
-                          </td>
-                        </tr>
-                    </tbody>
+                  <thead>
+                    <tr>
+                      <th>Id </th>
+                      <th>Module Name </th>
+                      <th>Syntactical Verification </th>
+                      <th>Functional Verification</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Module 1</td>
+                      <td>Syntactical Verification</td>
+                      <td>
+                        <p class="status delivered">Passed</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Module 1</td>
+                      <td>Functional Verification</td>
+                      <td>
+                        <p class="status cancelled">Failed</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Module 1</td>
+                      <td>Functional Verification</td>
+                      <td>
+                        <p class="status delivered">Passed</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Module 1</td>
+                      <td>Syntactical Verification</td>
+                      <td>
+                        <p class="status cancelled">Failed</p>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
-            </section>                      
-            <button class="button" onclick="tryagain()">Try Again</button>
+              </section>                      
         </div>
     </div>    
     <div class="fifth" id="third"> 
@@ -114,5 +114,5 @@
 </body>
 <script src="frontend/web/js/min.js"></script>
 <script src="js/script.js" defer></script>
-<script src="js/backend.js"></script>
+<script src="js/backend.js" defer></script>
 </html>
