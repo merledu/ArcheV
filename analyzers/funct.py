@@ -14,7 +14,7 @@ def functional_verification(file_name):
     with open('input.txt', 'w') as f:
             for case in data['test_cases']:
                 for x in range(len(list(case['input'].values()))):
-                    f.write(f"{list(case['input'].values())[x]} ")
+                    f.write(f"{list(case['input'].values())[x]}")
                     i+=1
                 f.write("\n")
     for case in data['test_cases']:

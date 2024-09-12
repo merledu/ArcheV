@@ -4,6 +4,8 @@ function analyze() {
     let gpu_layers = document.getElementById("gpu-layers").value;
     pywebview.api.analyze(llm_path, context_length, gpu_layers)
 }
+
+
 function updateTable(data) {
     const tableBody = document.querySelector('table tbody');
     tableBody.innerHTML = '';
@@ -18,15 +20,15 @@ function updateTable(data) {
         const syntacticalCell = document.createElement('td');
         const syntacticalStatus = item[0]; 
         const syntacticalText = document.createElement('p');
-        syntacticalText.className = syntacticalStatus === 'passed' ? 'status delivered' : 'status cancelled';
-        syntacticalText.textContent = syntacticalStatus === 'passed' ? 'Passed' : 'Failed';
+        syntacticalText.className = syntacticalStatus === 'True' ? 'status delivered' : 'status cancelled';
+        syntacticalText.textContent = syntacticalStatus === 'True' ? 'True' : 'False';
         syntacticalCell.appendChild(syntacticalText);
         row.appendChild(syntacticalCell);
         const functionalCell = document.createElement('td');
         const functionalStatus = item[1]; 
         const functionalText = document.createElement('p');
-        functionalText.className = functionalStatus === 'passed' ? 'status delivered' : 'status cancelled';
-        functionalText.textContent = functionalStatus === 'passed' ? 'Passed' : 'Failed';
+        functionalText.className = functionalStatus === 'True' ? 'status delivered' : 'status cancelled';
+        functionalText.textContent = functionalStatus === 'True' ? 'True' : 'False';
         functionalCell.appendChild(functionalText);
         row.appendChild(functionalCell);
         tableBody.appendChild(row);
