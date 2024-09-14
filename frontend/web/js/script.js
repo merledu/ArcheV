@@ -1,14 +1,14 @@
 function second() {
-    var element = document.getElementsByClassName("second")[0];
+    let element = document.getElementsByClassName("second")[0];
         element.style.display = "flex";
         element.scrollIntoView({ behavior: 'smooth' });
 }
 
 
 function openFile() {
-    window.pywebview.api.open_file_dialog()
-        .then(function(filePath) 
-        {document.getElementById('llm-path').value = filePath;
+    let x=pywebview.api.open_file_dialog()
+    x.then(function(filePath) {
+        document.getElementById('llm-path').value = filePath;
 })}
 
 
