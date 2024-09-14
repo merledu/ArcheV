@@ -9,13 +9,19 @@ function selectPath() {
     document.getElementById('folder-selector').click();
 }
 
-
-document.getElementById('folder-selector').addEventListener('change', function(event) {
-    const files = event.target.files;
-    if (files.length > 0) {
-        document.getElementById('llm-path').value = files[0].webkitRelativePath || files[0].name;
-    }
-  });
+function handleFiles(inputElementId) {
+  const inputElement = document.getElementById(inputElementId);
+  const files = inputElement.files;
+  if (files.length > 0) {
+      document.getElementById('llm-path').value = files[0].webkitRelativePath || files[0].name;
+  }
+}
+// document.getElementById('folder-selector').addEventListener('change', function(event) {
+//     const files = event.target.files;
+//     if (files.length > 0) {
+//         document.getElementById('llm-path').value = files[0].webkitRelativePath || files[0].name;
+//     }
+//   });
 
 
 function analyzes() {

@@ -10,6 +10,7 @@ export ARCHEV_ROOT=`pwd`
 python3.10 -m venv .venv
 source $ARCHEV_ROOT/.venv/bin/activate
 pip3 install wheel pywebview pygobject
+CMAKE_ARGS="-DGGML_VULKAN=1" pip install llama-cpp-python
 
 
 # Directories
