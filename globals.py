@@ -1,4 +1,5 @@
 import os
+import webview
 
 
 ARCHEV_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -11,4 +12,10 @@ TEST_BENCH = os.path.join(ARCHEV_ROOT, 'test_bench')
 
 
 llm = None
-window = None
+window = webview.create_window(
+        title = 'ArcheV',
+        url = 'frontend/web/index.html',
+        width = 1200,
+        height = 600,
+        resizable = False,
+    ) 

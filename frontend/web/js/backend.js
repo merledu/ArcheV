@@ -1,9 +1,22 @@
-function analyze() {
+function analyzes() {
     let llm_path = document.getElementById("llm-path").value;
     let context_length = document.getElementById("context-length").value;
     let gpu_layers = document.getElementById("gpu-layers").value;
-    pywebview.api.analyze(llm_path, context_length, gpu_layers)
-}
+    const errorMessageDiv = document.getElementById('error-message');
+    if (!llm_path || !context_length || !gpu_layers) {
+      errorMessageDiv.textContent = 'Please fill in all fields.';
+      errorMessageDiv.style.display = 'block';
+      return; 
+      }
+    errorMessageDiv.style.display = 'none';
+    const thirdSection = document.getElementById('third');
+    if (thirdSection) {
+      thirdSection.style.display = 'block';
+      thirdSection.scrollIntoView({ behavior: 'smooth' });
+      updateProgressBar(100); 
+    }
+    pywebview.api.analyze(llm_path.trim(), context_length.trim(), gpu_layers.trim())
+  };
 
 
 function updateTable(data) {
