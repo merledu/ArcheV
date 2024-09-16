@@ -12,4 +12,4 @@ TEST_BENCH = os.path.join(ARCHEV_ROOT, 'test_bench')
 
 
 llm = None
-global_vars = {'windows': {}}
+global_vars = {'windows' :{}}

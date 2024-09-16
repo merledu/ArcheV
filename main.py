@@ -5,7 +5,6 @@ from frontend.expose import expose
 
     
 if __name__ == '__main__':
-    
     global_vars['windows']['main'] = webview.create_window(
         title = 'ArcheV',
         url = 'frontend/web/index.html',
