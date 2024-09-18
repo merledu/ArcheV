@@ -1,12 +1,13 @@
-# from llama_cpp import Llama
+from llama_cpp import Llama
 
 from globals import llm
 
 
 def load_llm(llm_path, context_length, gpu_layers):
+
     global llm
     llm = Llama(model_path=llm_path, n_ctx=context_length, n_gpu_layers=gpu_layers)
-
+  
 
 def llm_response(sys_prompt, user_prompt):
     while True:

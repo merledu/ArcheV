@@ -240,7 +240,7 @@ color:black;
 }
 .fourth {
     background-image: url("../images/background/AI4.jpg"); 
-    /* display: none;  */
+    display: none; 
     justify-content: center; 
     align-items: center; 
     flex-direction: column; 
