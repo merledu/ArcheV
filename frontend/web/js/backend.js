@@ -9,7 +9,7 @@ function analyzes() {
     return; 
   }
   let x = pywebview.api.analyze(llm_path.trim(), context_length.trim(), gpu_layers.trim())
-  if (x== Dictionary){ ////////
+  // if (x== Dictionary){ ////////
   errorMessageDiv.style.display = 'none';
   const thirdSection = document.getElementById('third');
   if (thirdSection) {
@@ -17,7 +17,8 @@ function analyzes() {
     thirdSection.scrollIntoView({ behavior: 'smooth' });
     updateProgressBar(100); 
   }
-  }
+  // }
+  x
   };
 
     function display_table(x){
