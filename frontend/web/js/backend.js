@@ -19,55 +19,46 @@ function analyzes() {
   }
   // }
   x
+    display_data(x)
   };
 
-    function display_table(x){
-    let table_body = document.createElement("#dictable tbody")
+   
+  function display_data(x) {
+    let tableBody = document.querySelector("#dictable tbody");
 
-    for(let key in x){
-
-      let row = document.createElement("tr");
-      let value = document.createElement("td");
-      value.textContent = dictionary[key];
-      row.appendChild(value);
-
-      table_body.appendChild(row);
-      
+    
+    let idcounter = 1;
 
 
+    for (let key in x) {
+       
+
+    let row = document.createElement("tr");
+
+        
+    let idCell = document.createElement("td");
+    idCell.textContent = idCounter; 
+    row.appendChild(idCell);
+
+       
+    let promptCell = document.createElement("td");
+    promptCell.textContent = x["Prompt"];
+    row.appendChild(promptCell);
 
 
+    let syntacticalCell = document.createElement("td");
+    syntacticalCell.textContent = x["syntactical_verification"];
+    row.appendChild(syntacticalCell);
 
 
+    let functionalCell = document.createElement("td");
+    functionalCell.textContent = x["functional_verification"];
+    row.appendChild(functionalCell);
+
+        
+    tableBody.appendChild(row);
+
+        
+    idcounter++;
     }
-    }    
-
-
-// function updateTable(data) {
-//     const tableBody = document.querySelector('table tbody');
-//     tableBody.innerHTML = '';
-//     data.forEach((item, index) => {
-//         const row = document.createElement('tr');
-//         const idCell = document.createElement('td');
-//         idCell.textContent = index + 1;
-//         row.appendChild(idCell);
-//         const moduleNameCell = document.createElement('td');
-//         moduleNameCell.textContent = item[2]; 
-//         row.appendChild(moduleNameCell);
-//         const syntacticalCell = document.createElement('td');
-//         const syntacticalStatus = item[0]; 
-//         const syntacticalText = document.createElement('p');
-//         syntacticalText.className = syntacticalStatus === 'True' ? 'status delivered' : 'status cancelled';
-//         syntacticalText.textContent = syntacticalStatus === 'True' ? 'True' : 'False';
-//         syntacticalCell.appendChild(syntacticalText);
-//         row.appendChild(syntacticalCell);
-//         const functionalCell = document.createElement('td');
-//         const functionalStatus = item[1]; 
-//         const functionalText = document.createElement('p');
-//         functionalText.className = functionalStatus === 'True' ? 'status delivered' : 'status cancelled';
-//         functionalText.textContent = functionalStatus === 'True' ? 'True' : 'False';
-//         functionalCell.appendChild(functionalText);
-//         row.appendChild(functionalCell);
-//         tableBody.appendChild(row);
-//     });
-// }
+}
