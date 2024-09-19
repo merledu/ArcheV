@@ -29,8 +29,8 @@
           <h1>LLM Settings</h1>          
           <div id="analyze-form">
             <div class="input-container">
-                <input type="text" id="llm-path" class="input-9" placeholder="Select a folder path" required readonly>
-                <button type="button" class="input-9 get-started-btn"  onclick="openFile()" id="select-folder">Select Folder</button>
+                <input type="text" id="llm-path" class="input-9" placeholder="Select a file path" required readonly>
+                <button type="button" class="input-9 get-started-btn"  onclick="openFile()" id="select-folder">Select File</button>
             </div>
             <input type="text" id="gpu-layers" class="input-9" placeholder="GPU Layers" required>
             <input type="text" id="context-length" class="input-9" placeholder="Context Number" required>
@@ -55,7 +55,7 @@
     <div class="fourth" id="fourth"> 
         <div class="overlay">
             <section class="table__body">
-                <table>
+                <table id="dictable" >
                   <thead>
                     <tr>
                       <th>Id </th>
@@ -65,52 +65,14 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Module 1</td>
-                      <td>Syntactical Verification</td>
-                      <td>
-                        <p class="status delivered">Passed</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Module 1</td>
-                      <td>Functional Verification</td>
-                      <td>
-                        <p class="status cancelled">Failed</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Module 1</td>
-                      <td>Functional Verification</td>
-                      <td>
-                        <p class="status delivered">Passed</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Module 1</td>
-                      <td>Syntactical Verification</td>
-                      <td>
-                        <p class="status cancelled">Failed</p>
-                      </td>
-                    </tr>
+                    
+                    
                   </tbody>
                 </table>
               </section>                      
         </div>
     </div>    
-    <div class="fifth" id="third"> 
-        <div class="overlay">
-            <p class="v">Visit Merledu</p>
-            <p class="f_line"><span class="opacity-8">Learning never exhausts the mind.</span></p>
-            <button type="submit" class="button" name="submit"> Contact us </button>            
-        </div>
-    </div>
 </body>
-<script src="frontend/web/js/min.js"></script>
 <script src="js/script.js" defer></script>
 <script src="js/backend.js" defer></script>
 </html>
