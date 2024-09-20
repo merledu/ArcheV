@@ -1,4 +1,4 @@
-function analyzes() {
+async function analyzes() {
   let llm_path = document.getElementById("llm-path").value;
   let context_length = document.getElementById("context-length").value;
   let gpu_layers = document.getElementById("gpu-layers").value;
@@ -8,7 +8,7 @@ function analyzes() {
     errorMessageDiv.style.display = 'block';
     return; 
   }
-  let x = pywebview.api.analyze(llm_path.trim(), context_length.trim(), gpu_layers.trim())
+  let result = await pywebview.api.analyze()
   // if (x== Dictionary){ ////////
   errorMessageDiv.style.display = 'none';
   const thirdSection = document.getElementById('third');
@@ -18,47 +18,29 @@ function analyzes() {
     updateProgressBar(100); 
   }
   // }
-  x
-    display_data(x)
-  };
+  result;
+  display_data(result)
+};
 
-   
-  function display_data(x) {
-    let tableBody = document.querySelector("#dictable tbody");
-
-    
-    let idcounter = 1;
-
-
-    for (let key in x) {
-       
-
-    let row = document.createElement("tr");
-
-        
-    let idCell = document.createElement("td");
-    idCell.textContent = idCounter; 
-    row.appendChild(idCell);
-
-       
-    let promptCell = document.createElement("td");
-    promptCell.textContent = x["Prompt"];
-    row.appendChild(promptCell);
-
-
-    let syntacticalCell = document.createElement("td");
-    syntacticalCell.textContent = x["syntactical_verification"];
-    row.appendChild(syntacticalCell);
-
-
-    let functionalCell = document.createElement("td");
-    functionalCell.textContent = x["functional_verification"];
-    row.appendChild(functionalCell);
-
-        
-    tableBody.appendChild(row);
-
-        
-    idcounter++;
-    }
+ 
+function display_data(x) {
+  let tableBody = document.querySelector("#dictable tbody");
+  let idcounter = 1;
+  for (let key in x) {
+  let row = document.createElement("tr");      
+  let idCell = document.createElement("td");
+  idCell.textContent = idcounter; 
+  row.appendChild(idCell);      
+  let promptCell = document.createElement("td");
+  promptCell.textContent = x[key]["Prompt"];
+  row.appendChild(promptCell);
+  let syntacticalCell = document.createElement("td");
+  syntacticalCell.textContent = x[key]["syntactical_verification"];
+  row.appendChild(syntacticalCell);
+  let functionalCell = document.createElement("td");
+  functionalCell.textContent = x[key]["functional_verification"];
+  row.appendChild(functionalCell);       
+  tableBody.appendChild(row);       
+  idcounter++;
+  }
 }

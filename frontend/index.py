@@ -1,13 +1,16 @@
 import os
 
-from globals import ARCHEV_PROMPTS, SYSTEM_PROMPTS, TMP_VERILOG
+from globals import ARCHEV_PROMPTS, SYSTEM_PROMPTS, TMP_VERILOG,global_vars 
 from llm_interface.llm_interface import load_llm, llm_response
 from analyzers.linter import lint
 from analyzers.funct import functional_verification
 
 
 def analyze(llm_path, context_length, gpu_layers):
-    load_llm(llm_path, context_length, gpu_layers)
+    try: 
+        load_llm(llm_path, int(context_length), int(gpu_layers)) 
+    except Exception as err: 
+        return global_vars['windows']['main'].evaluate_js(f'alert("{err}")') 
     results = {}
     progress = 0
 
